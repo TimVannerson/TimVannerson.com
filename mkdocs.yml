@@ -1,0 +1,10 @@
+site_name: TimVannerson.com
+docs_dir: Public
+nav:
+  - Home: index.md
+  - Say Hello: mailto:sayhello@timvannerson.com
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: deep purple
