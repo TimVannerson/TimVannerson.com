@@ -1,0 +1,3263 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+    
+    
+      
+        <title>RobinStocks Documentation 1.0.0 - Robinhood Functions (No Crypto) - TimVannerson.com</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#robinstocks-documentation-100-robinhood-functions-no-crypto" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="TimVannerson.com" class="md-header__button md-logo" aria-label="TimVannerson.com" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TimVannerson.com
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              RobinStocks Documentation 1.0.0 - Robinhood Functions (No Crypto)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TimVannerson.com" class="md-nav__button md-logo" aria-label="TimVannerson.com" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TimVannerson.com
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mailto:sayhello@timvannerson.com" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Say Hello
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sending-requests-to-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sending Requests to API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sending Requests to API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodhelperrequest_deleteurl" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.helper.request_delete(url)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodhelperrequest_documenturl-payloadnone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.helper.request_document(url, payload=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodhelperrequest_geturl-datatyperegular-payloadnone-jsonify_datatrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.helper.request_get(url, dataType='regular', payload=None, jsonify_data=True)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodhelperrequest_posturl-payloadnone-timeout16-jsonfalse-jsonify_datatrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.helper.request_post(url, payload=None, timeout=16, json=False, jsonify_data=True)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-in-and-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging In and Out
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging In and Out">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodauthenticationloginusernamenone-passwordnone-expiresin86400-scopeinternal-by_smstrue-store_sessiontrue-mfa_codenone-pickle_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.authentication.login(username=None, password=None, expiresIn=86400, scope='internal', by_sms=True, store_session=True, mfa_code=None, pickle_name='')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodauthenticationlogout" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.authentication.logout()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loading-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loading Profiles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Loading Profiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodprofilesload_account_profileaccount_numbernone-infonone-datatypeindexzero" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.profiles.load_account_profile(account_number=None, info=None, dataType='indexzero')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodprofilesload_basic_profileinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.profiles.load_basic_profile(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodprofilesload_investment_profileinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.profiles.load_investment_profile(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodprofilesload_portfolio_profileaccount_numbernone-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.profiles.load_portfolio_profile(account_number=None, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodprofilesload_security_profileinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.profiles.load_security_profile(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodprofilesload_user_profileinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.profiles.load_user_profile(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-stock-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Stock Information
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Stock Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodstocksfind_instrument_dataquery" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.stocks.find_instrument_data(query)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodstocksget_earningssymbol-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.stocks.get_earnings(symbol, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodstocksget_eventssymbol-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.stocks.get_events(symbol, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodstocksget_fundamentalsinputsymbols-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.stocks.get_fundamentals(inputSymbols, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodstocksget_instrument_by_urlurl-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.stocks.get_instrument_by_url(url, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodstocksget_instruments_by_symbolsinputsymbols-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.stocks.get_instruments_by_symbols(inputSymbols, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodstocksget_latest_priceinputsymbols-pricetypenone-includeextendedhourstrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.stocks.get_latest_price(inputSymbols, priceType=None, includeExtendedHours=True)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodstocksget_name_by_symbolsymbol" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.stocks.get_name_by_symbol(symbol)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodstocksget_name_by_urlurl" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.stocks.get_name_by_url(url)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodstocksget_newssymbol-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.stocks.get_news(symbol, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodstocksget_pricebook_by_idstock_id-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.stocks.get_pricebook_by_id(stock_id, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodstocksget_pricebook_by_symbolsymbol-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.stocks.get_pricebook_by_symbol(symbol, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodstocksget_quotesinputsymbols-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.stocks.get_quotes(inputSymbols, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodstocksget_ratingssymbol-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.stocks.get_ratings(symbol, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodstocksget_splitssymbol-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.stocks.get_splits(symbol, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodstocksget_stock_historicalsinputsymbols-intervalhour-spanweek-boundsregular-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.stocks.get_stock_historicals(inputSymbols, interval='hour', span='week', bounds='regular', info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodstocksget_stock_quote_by_idstock_id-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.stocks.get_stock_quote_by_id(stock_id, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodstocksget_stock_quote_by_symbolsymbol-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.stocks.get_stock_quote_by_symbol(symbol, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodstocksget_symbol_by_urlurl" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.stocks.get_symbol_by_url(url)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-option-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Option Information
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Option Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodoptionsfind_options_by_expirationinputsymbols-expirationdate-optiontypenone-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.options.find_options_by_expiration(inputSymbols, expirationDate, optionType=None, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodoptionsfind_options_by_expiration_and_strikeinputsymbols-expirationdate-strikeprice-optiontypenone-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.options.find_options_by_expiration_and_strike(inputSymbols, expirationDate, strikePrice, optionType=None, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodoptionsfind_options_by_specific_profitabilityinputsymbols-expirationdatenone-strikepricenone-optiontypenone-typeprofitchance_of_profit_short-profitfloor00-profitceiling10-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.options.find_options_by_specific_profitability(inputSymbols, expirationDate=None, strikePrice=None, optionType=None, typeProfit='chance_of_profit_short', profitFloor=0.0, profitCeiling=1.0, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodoptionsfind_options_by_strikeinputsymbols-strikeprice-optiontypenone-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.options.find_options_by_strike(inputSymbols, strikePrice, optionType=None, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodoptionsfind_tradable_optionssymbol-expirationdatenone-strikepricenone-optiontypenone-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.options.find_tradable_options(symbol, expirationDate=None, strikePrice=None, optionType=None, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodoptionsget_aggregate_open_positionsinfonone-account_numbernone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.options.get_aggregate_open_positions(info=None, account_number=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodoptionsget_aggregate_positionsinfonone-account_numbernone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.options.get_aggregate_positions(info=None, account_number=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodoptionsget_all_option_positionsinfonone-account_numbernone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.options.get_all_option_positions(info=None, account_number=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodoptionsget_chainssymbol-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.options.get_chains(symbol, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodoptionsget_market_optionsinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.options.get_market_options(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodoptionsget_open_option_positionsaccount_numbernone-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.options.get_open_option_positions(account_number=None, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodoptionsget_option_historicalssymbol-expirationdate-strikeprice-optiontype-intervalhour-spanweek-boundsregular-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.options.get_option_historicals(symbol, expirationDate, strikePrice, optionType, interval='hour', span='week', bounds='regular', info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodoptionsget_option_instrument_datasymbol-expirationdate-strikeprice-optiontype-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.options.get_option_instrument_data(symbol, expirationDate, strikePrice, optionType, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodoptionsget_option_instrument_data_by_idid-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.options.get_option_instrument_data_by_id(id, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodoptionsget_option_market_datainputsymbols-expirationdate-strikeprice-optiontype-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.options.get_option_market_data(inputSymbols, expirationDate, strikePrice, optionType, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodoptionsget_option_market_data_by_idid-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.options.get_option_market_data_by_id(id, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodoptionsspinning_cursor" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.options.spinning_cursor()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodoptionswrite_spinner" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.options.write_spinner()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-market-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Market Information
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Market Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodmarketsget_all_stocks_from_market_tagtag-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.markets.get_all_stocks_from_market_tag(tag, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodmarketsget_currency_pairsinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.markets.get_currency_pairs(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodmarketsget_market_hoursmarket-date-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.markets.get_market_hours(market, date, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodmarketsget_market_next_open_hoursmarket-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.markets.get_market_next_open_hours(market, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodmarketsget_market_next_open_hours_after_datemarket-date-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.markets.get_market_next_open_hours_after_date(market, date, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodmarketsget_market_today_hoursmarket-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.markets.get_market_today_hours(market, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodmarketsget_marketsinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.markets.get_markets(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodmarketsget_top_100infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.markets.get_top_100(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodmarketsget_top_moversinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.markets.get_top_movers(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodmarketsget_top_movers_sp500direction-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.markets.get_top_movers_sp500(direction, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-positions-and-account-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Positions and Account Information
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Positions and Account Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountbuild_holdingswith_dividendsfalse" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.build_holdings(with_dividends=False)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountbuild_user_profileaccount_numbernone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.build_user_profile(account_number=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountdelete_symbols_from_watchlistinputsymbols-namemy-first-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.delete_symbols_from_watchlist(inputSymbols, name='My First List')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountdeposit_funds_to_robinhood_accountach_relationship-amount-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.deposit_funds_to_robinhood_account(ach_relationship, amount, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountdownload_all_documentsdoctypenone-dirpathnone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.download_all_documents(doctype=None, dirpath=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountdownload_documenturl-namenone-dirpathnone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.download_document(url, name=None, dirpath=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountget_all_positionsinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.get_all_positions(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountget_all_watchlistsinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.get_all_watchlists(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountget_bank_account_infoid-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.get_bank_account_info(id, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountget_bank_transfersdirectionnone-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.get_bank_transfers(direction=None, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountget_card_transactionscardtypenone-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.get_card_transactions(cardType=None, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountget_day_tradesinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.get_day_trades(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountget_dividendsinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.get_dividends(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountget_dividends_by_instrumentinstrument-dividend_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.get_dividends_by_instrument(instrument, dividend_data)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountget_documentsinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.get_documents(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountget_interest_paymentsinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.get_interest_payments(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountget_latest_notification" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.get_latest_notification()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountget_linked_bank_accountsinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.get_linked_bank_accounts(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountget_margin_callssymbolnone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.get_margin_calls(symbol=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountget_margin_interestinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.get_margin_interest(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountget_notificationsinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.get_notifications(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountget_open_stock_positionsaccount_numbernone-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.get_open_stock_positions(account_number=None, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountget_referralsinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.get_referrals(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountget_stock_loan_paymentsinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.get_stock_loan_payments(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountget_subscription_feesinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.get_subscription_fees(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountget_total_divi" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.get_total_divi()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountget_watchlist_by_namenamemy-first-list-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.get_watchlist_by_name(name='My First List', info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountget_wire_transfersinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.get_wire_transfers(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountload_phoenix_accountinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.load_phoenix_account(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountpost_symbols_to_watchlistinputsymbols-namemy-first-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.post_symbols_to_watchlist(inputSymbols, name='My First List')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountunlink_bank_accountid" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.unlink_bank_account(id)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodaccountwithdrawl_funds_to_bank_accountach_relationship-amount-infonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.account.withdrawl_funds_to_bank_account(ach_relationship, amount, info=None)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#placing-and-cancelling-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Placing and Cancelling Orders
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Placing and Cancelling Orders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodorderscancel_all_option_orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.cancel_all_option_orders()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodorderscancel_all_stock_orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.cancel_all_stock_orders()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodorderscancel_option_orderorderid" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.cancel_option_order(orderID)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodorderscancel_stock_orderorderid" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.cancel_stock_order(orderID)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersfind_stock_ordersarguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.find_stock_orders(**arguments)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersget_all_open_option_ordersinfonone-account_numbernone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.get_all_open_option_orders(info=None, account_number=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersget_all_open_stock_ordersinfonone-account_numbernone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.get_all_open_stock_orders(info=None, account_number=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersget_all_option_ordersinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.get_all_option_orders(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersget_all_stock_ordersinfonone" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.get_all_stock_orders(info=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersget_option_order_infoorder_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.get_option_order_info(order_id)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersget_stock_order_infoorderid" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.get_stock_order_info(orderID)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersordersymbol-quantity-side-limitpricenone-stoppricenone-account_numbernone-timeinforcegtc-extendedhoursfalse-jsonifytrue-market_hoursregular_hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order(symbol, quantity, side, limitPrice=None, stopPrice=None, account_number=None, timeInForce='gtc', extendedHours=False, jsonify=True, market_hours='regular_hours')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersorder_buy_fractional_by_pricesymbol-amountindollars-account_numbernone-timeinforcegfd-extendedhoursfalse-jsonifytrue-market_hoursregular_hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order_buy_fractional_by_price(symbol, amountInDollars, account_number=None, timeInForce='gfd', extendedHours=False, jsonify=True, market_hours='regular_hours')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersorder_buy_fractional_by_quantitysymbol-quantity-account_numbernone-timeinforcegfd-extendedhoursfalse-jsonifytrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order_buy_fractional_by_quantity(symbol, quantity, account_number=None, timeInForce='gfd', extendedHours=False, jsonify=True)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersorder_buy_limitsymbol-quantity-limitprice-account_numbernone-timeinforcegtc-extendedhoursfalse-jsonifytrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order_buy_limit(symbol, quantity, limitPrice, account_number=None, timeInForce='gtc', extendedHours=False, jsonify=True)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersorder_buy_marketsymbol-quantity-account_numbernone-timeinforcegtc-extendedhoursfalse-jsonifytrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order_buy_market(symbol, quantity, account_number=None, timeInForce='gtc', extendedHours=False, jsonify=True)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersorder_buy_option_limitpositioneffect-creditordebit-price-symbol-quantity-expirationdate-strike-optiontypeboth-account_numbernone-timeinforcegtc-jsonifytrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order_buy_option_limit(positionEffect, creditOrDebit, price, symbol, quantity, expirationDate, strike, optionType='both', account_number=None, timeInForce='gtc', jsonify=True)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersorder_buy_option_stop_limitpositioneffect-creditordebit-limitprice-stopprice-symbol-quantity-expirationdate-strike-optiontypeboth-account_numbernone-timeinforcegtc-jsonifytrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order_buy_option_stop_limit(positionEffect, creditOrDebit, limitPrice, stopPrice, symbol, quantity, expirationDate, strike, optionType='both', account_number=None, timeInForce='gtc', jsonify=True)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersorder_buy_stop_limitsymbol-quantity-limitprice-stopprice-account_numbernone-timeinforcegtc-extendedhoursfalse-jsonifytrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order_buy_stop_limit(symbol, quantity, limitPrice, stopPrice, account_number=None, timeInForce='gtc', extendedHours=False, jsonify=True)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersorder_buy_stop_losssymbol-quantity-stopprice-account_numbernone-timeinforcegtc-extendedhoursfalse-jsonifytrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order_buy_stop_loss(symbol, quantity, stopPrice, account_number=None, timeInForce='gtc', extendedHours=False, jsonify=True)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersorder_buy_trailing_stopsymbol-quantity-trailamount-trailtypepercentage-timeinforcegtc-extendedhoursfalse-jsonifytrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order_buy_trailing_stop(symbol, quantity, trailAmount, trailType='percentage', timeInForce='gtc', extendedHours=False, jsonify=True)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersorder_option_credit_spreadprice-symbol-quantity-spread-timeinforcegtc-account_numbernone-jsonifytrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order_option_credit_spread(price, symbol, quantity, spread, timeInForce='gtc', account_number=None, jsonify=True)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersorder_option_debit_spreadprice-symbol-quantity-spread-timeinforcegtc-account_numbernone-jsonifytrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order_option_debit_spread(price, symbol, quantity, spread, timeInForce='gtc', account_number=None, jsonify=True)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersorder_option_spreaddirection-price-symbol-quantity-spread-account_numbernone-timeinforcegtc-jsonifytrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order_option_spread(direction, price, symbol, quantity, spread, account_number=None, timeInForce='gtc', jsonify=True)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersorder_sell_fractional_by_pricesymbol-amountindollars-account_numbernone-timeinforcegfd-extendedhoursfalse-jsonifytrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order_sell_fractional_by_price(symbol, amountInDollars, account_number=None, timeInForce='gfd', extendedHours=False, jsonify=True)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersorder_sell_fractional_by_quantitysymbol-quantity-account_numbernone-timeinforcegfd-pricetypebid_price-extendedhoursfalse-jsonifytrue-market_hoursregular_hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order_sell_fractional_by_quantity(symbol, quantity, account_number=None, timeInForce='gfd', priceType='bid_price', extendedHours=False, jsonify=True, market_hours='regular_hours')
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersorder_sell_limitsymbol-quantity-limitprice-account_numbernone-timeinforcegtc-extendedhoursfalse-jsonifytrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order_sell_limit(symbol, quantity, limitPrice, account_number=None, timeInForce='gtc', extendedHours=False, jsonify=True)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersorder_sell_marketsymbol-quantity-account_numbernone-timeinforcegtc-extendedhoursfalse-jsonifytrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order_sell_market(symbol, quantity, account_number=None, timeInForce='gtc', extendedHours=False, jsonify=True)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersorder_sell_option_limitpositioneffect-creditordebit-price-symbol-quantity-expirationdate-strike-optiontypeboth-account_numbernone-timeinforcegtc-jsonifytrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order_sell_option_limit(positionEffect, creditOrDebit, price, symbol, quantity, expirationDate, strike, optionType='both', account_number=None, timeInForce='gtc', jsonify=True)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersorder_sell_option_stop_limitpositioneffect-creditordebit-limitprice-stopprice-symbol-quantity-expirationdate-strike-optiontypeboth-account_numbernone-timeinforcegtc-jsonifytrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order_sell_option_stop_limit(positionEffect, creditOrDebit, limitPrice, stopPrice, symbol, quantity, expirationDate, strike, optionType='both', account_number=None, timeInForce='gtc', jsonify=True)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersorder_sell_stop_limitsymbol-quantity-limitprice-stopprice-account_numbernone-timeinforcegtc-extendedhoursfalse-jsonifytrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order_sell_stop_limit(symbol, quantity, limitPrice, stopPrice, account_number=None, timeInForce='gtc', extendedHours=False, jsonify=True)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersorder_sell_stop_losssymbol-quantity-stopprice-account_numbernone-timeinforcegtc-extendedhoursfalse-jsonifytrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order_sell_stop_loss(symbol, quantity, stopPrice, account_number=None, timeInForce='gtc', extendedHours=False, jsonify=True)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersorder_sell_trailing_stopsymbol-quantity-trailamount-trailtypepercentage-timeinforcegtc-extendedhoursfalse-jsonifytrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order_sell_trailing_stop(symbol, quantity, trailAmount, trailType='percentage', timeInForce='gtc', extendedHours=False, jsonify=True)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robin_stocksrobinhoodordersorder_trailing_stopsymbol-quantity-side-trailamount-trailtypepercentage-account_numbernone-timeinforcegtc-extendedhoursfalse-jsonifytrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      robin_stocks.robinhood.orders.order_trailing_stop(symbol, quantity, side, trailAmount, trailType='percentage', account_number=None, timeInForce='gtc', extendedHours=False, jsonify=True)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="robinstocks-documentation-100-robinhood-functions-no-crypto">RobinStocks Documentation 1.0.0 - Robinhood Functions (No Crypto)</h1>
+<h2 id="sending-requests-to-api">Sending Requests to API</h2>
+<p>Contains decorator functions and functions for interacting with global data.</p>
+<h3 id="robin_stocksrobinhoodhelperrequest_deleteurl"><code>robin_stocks.robinhood.helper.request_delete(url)</code></h3>
+<p>Makes a DELETE request to the specified URL and returns the response.</p>
+<p><strong>Parameters:</strong>
+- <code>url</code> (str): The URL to send a DELETE request to.</p>
+<p><strong>Returns:</strong>
+- The data from the DELETE request.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodhelperrequest_documenturl-payloadnone"><code>robin_stocks.robinhood.helper.request_document(url, payload=None)</code></h3>
+<p>Makes a GET request to the specified document URL and returns the session data.</p>
+<p><strong>Parameters:</strong>
+- <code>url</code> (str): The URL to send a GET request to.
+- <code>payload</code> (optional): The payload to include in the GET request.</p>
+<p><strong>Returns:</strong>
+- The data from <code>session.get()</code> instead of <code>session.get().json()</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodhelperrequest_geturl-datatyperegular-payloadnone-jsonify_datatrue"><code>robin_stocks.robinhood.helper.request_get(url, dataType='regular', payload=None, jsonify_data=True)</code></h3>
+<p>Makes a GET request to the specified URL and returns the data.</p>
+<p><strong>Parameters:</strong>
+- <code>url</code> (str): The URL to send a GET request to.
+- <code>dataType</code> (str, optional): Determines how to filter the data. Possible values:
+  - <code>'regular'</code>: Returns the unfiltered data.
+  - <code>'results'</code>: Returns <code>data['results']</code>.
+  - <code>'pagination'</code>: Returns <code>data['results']</code> and appends it with any data in <code>data['next']</code>.
+  - <code>'indexzero'</code>: Returns <code>data['results'][0]</code>.
+- <code>payload</code> (dict, optional): Dictionary of parameters to pass to the URL.
+- <code>jsonify_data</code> (bool): If true, returns <code>requests.post().json()</code>, otherwise returns the response from <code>requests.post()</code>.</p>
+<p><strong>Returns:</strong>
+- The data from the GET request. If <code>jsonify_data=True</code> and the HTTP code is not 200, returns either <code>[None]</code> or <code>None</code> based on the <code>dataType</code> parameter.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodhelperrequest_posturl-payloadnone-timeout16-jsonfalse-jsonify_datatrue"><code>robin_stocks.robinhood.helper.request_post(url, payload=None, timeout=16, json=False, jsonify_data=True)</code></h3>
+<p>Makes a POST request to the specified URL with the given payload and returns the response. Supports responses other than 200.</p>
+<p><strong>Parameters:</strong>
+- <code>url</code> (str): The URL to send a POST request to.
+- <code>payload</code> (dict, optional): Dictionary of parameters to pass to the URL.
+- <code>timeout</code> (int, optional): The time in seconds for the POST request to wait for a response.
+- <code>json</code> (bool): Sets the <code>content-type</code> parameter of the session header to <code>'application/json'</code>.
+- <code>jsonify_data</code> (bool): If true, returns <code>requests.post().json()</code>, otherwise returns the response from <code>requests.post()</code>.</p>
+<p><strong>Returns:</strong>
+- The data from the POST request.</p>
+<h2 id="logging-in-and-out">Logging In and Out</h2>
+<p>Contains all functions for the purpose of logging in and out to Robinhood.</p>
+<h3 id="robin_stocksrobinhoodauthenticationloginusernamenone-passwordnone-expiresin86400-scopeinternal-by_smstrue-store_sessiontrue-mfa_codenone-pickle_name"><code>robin_stocks.robinhood.authentication.login(username=None, password=None, expiresIn=86400, scope='internal', by_sms=True, store_session=True, mfa_code=None, pickle_name='')</code></h3>
+<p>Logs the user into Robinhood by obtaining an authentication token and saving it to the session header. By default, the authentication token is stored in a pickle file for future logins.</p>
+<p><strong>Parameters:</strong>
+- <code>username</code> (str, optional): The username for your Robinhood account, usually your email. Not required if credentials are already cached and valid.
+- <code>password</code> (str, optional): The password for your Robinhood account. Not required if credentials are already cached and valid.
+- <code>expiresIn</code> (int, optional): The time in seconds until your login session expires.
+- <code>scope</code> (str, optional): Specifies the scope of the authentication.
+- <code>by_sms</code> (bool, optional): Specifies whether to send a verification code via SMS (True) or email (False).
+- <code>store_session</code> (bool, optional): Specifies whether to save the login authorization for future logins.
+- <code>mfa_code</code> (str, optional): MFA token if enabled.
+- <code>pickle_name</code> (str, optional): Allows users to name the pickle token file to switch between different accounts without re-login.</p>
+<p><strong>Returns:</strong>
+- A dictionary with login information. The <code>access_token</code> key contains the access token, and the <code>detail</code> key contains information on whether the access token was generated or loaded from a pickle file.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodauthenticationlogout"><code>robin_stocks.robinhood.authentication.logout()</code></h3>
+<p>Removes authorization from the session header.</p>
+<p><strong>Returns:</strong>
+- None</p>
+<h2 id="loading-profiles">Loading Profiles</h2>
+<p>Contains functions for getting all the information tied to a user account.</p>
+<h3 id="robin_stocksrobinhoodprofilesload_account_profileaccount_numbernone-infonone-datatypeindexzero"><code>robin_stocks.robinhood.profiles.load_account_profile(account_number=None, info=None, dataType='indexzero')</code></h3>
+<p>Gets the information associated with the account profile, including day trading information and cash being held by Robinhood.</p>
+<p><strong>Parameters:</strong>
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>info</code> (str, optional): The name of the key whose value is to be returned from the function.
+- <code>dataType</code> (str, optional): Determines how to filter the data. Possible values:
+  - <code>'regular'</code>: Returns the unfiltered data.
+  - <code>'results'</code>: Returns <code>data['results']</code>.
+  - <code>'pagination'</code>: Returns <code>data['results']</code> and appends it with any data in <code>data['next']</code>.
+  - <code>'indexzero'</code>: Returns <code>data['results'][0]</code>.</p>
+<p><strong>Returns:</strong>
+- A dictionary of key/value pairs. If a string is passed to the <code>info</code> parameter, returns a string corresponding to the value of the key whose name matches the <code>info</code> parameter.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>url</code>
+- <code>portfolio_cash</code>
+- <code>can_downgrade_to_cash</code>
+- <code>user</code>
+- <code>account_number</code>
+- <code>type</code>
+- <code>created_at</code>
+- <code>updated_at</code>
+- <code>deactivated</code>
+- <code>deposit_halted</code>
+- <code>only_position_closing_trades</code>
+- <code>buying_power</code>
+- <code>cash_available_for_withdrawal</code>
+- <code>cash</code>
+- <code>cash_held_for_orders</code>
+- <code>uncleared_deposits</code>
+- <code>sma</code>
+- <code>sma_held_for_orders</code>
+- <code>unsettled_funds</code>
+- <code>unsettled_debit</code>
+- <code>crypto_buying_power</code>
+- <code>max_ach_early_access_amount</code>
+- <code>cash_balances</code>
+- <code>margin_balances</code>
+- <code>sweep_enabled</code>
+- <code>instant_eligibility</code>
+- <code>option_level</code>
+- <code>is_pinnacle_account</code>
+- <code>rhs_account_number</code>
+- <code>state</code>
+- <code>active_subscription_id</code>
+- <code>locked</code>
+- <code>permanently_deactivated</code>
+- <code>received_ach_debit_locked</code>
+- <code>drip_enabled</code>
+- <code>eligible_for_fractionals</code>
+- <code>eligible_for_drip</code>
+- <code>eligible_for_cash_management</code>
+- <code>cash_management_enabled</code>
+- <code>option_trading_on_expiration_enabled</code>
+- <code>cash_held_for_options_collateral</code>
+- <code>fractional_position_closing_only</code>
+- <code>user_id</code>
+- <code>rhs_stock_loan_consent_status</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodprofilesload_basic_profileinfonone"><code>robin_stocks.robinhood.profiles.load_basic_profile(info=None)</code></h3>
+<p>Gets the information associated with the personal profile, such as phone number, city, marital status, and date of birth.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): The name of the key whose value is to be returned from the function.</p>
+<p><strong>Returns:</strong>
+- A dictionary of key/value pairs. If a string is passed to the <code>info</code> parameter, returns a string corresponding to the value of the key whose name matches the <code>info</code> parameter.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>user</code>
+- <code>address</code>
+- <code>city</code>
+- <code>state</code>
+- <code>zipcode</code>
+- <code>phone_number</code>
+- <code>marital_status</code>
+- <code>date_of_birth</code>
+- <code>citizenship</code>
+- <code>country_of_residence</code>
+- <code>number_dependents</code>
+- <code>signup_as_rhs</code>
+- <code>tax_id_ssn</code>
+- <code>updated_at</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodprofilesload_investment_profileinfonone"><code>robin_stocks.robinhood.profiles.load_investment_profile(info=None)</code></h3>
+<p>Gets the information associated with the investment profile. These are the answers to the questionnaire you filled out when creating your profile.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): The name of the key whose value is to be returned from the function.</p>
+<p><strong>Returns:</strong>
+- A dictionary of key/value pairs. If a string is passed to the <code>info</code> parameter, returns a string corresponding to the value of the key whose name matches the <code>info</code> parameter.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>user</code>
+- <code>total_net_worth</code>
+- <code>annual_income</code>
+- <code>source_of_funds</code>
+- <code>investment_objective</code>
+- <code>investment_experience</code>
+- <code>liquid_net_worth</code>
+- <code>risk_tolerance</code>
+- <code>tax_bracket</code>
+- <code>time_horizon</code>
+- <code>liquidity_needs</code>
+- <code>investment_experience_collected</code>
+- <code>suitability_verified</code>
+- <code>option_trading_experience</code>
+- <code>professional_trader</code>
+- <code>understand_option_spreads</code>
+- <code>interested_in_options</code>
+- <code>updated_at</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodprofilesload_portfolio_profileaccount_numbernone-infonone"><code>robin_stocks.robinhood.profiles.load_portfolio_profile(account_number=None, info=None)</code></h3>
+<p>Gets the information associated with the portfolio profile, such as withdrawable amount, market value of the account, and excess margin.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): The name of the key whose value is to be returned from the function.</p>
+<p><strong>Returns:</strong>
+- A dictionary of key/value pairs. If a string is passed to the <code>info</code> parameter, returns a string corresponding to the value of the key whose name matches the <code>info</code> parameter.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>url</code>
+- <code>account</code>
+- <code>start_date</code>
+- <code>market_value</code>
+- <code>equity</code>
+- <code>extended_hours_market_value</code>
+- <code>extended_hours_equity</code>
+- <code>extended_hours_portfolio_equity</code>
+- <code>last_core_market_value</code>
+- <code>last_core_equity</code>
+- <code>last_core_portfolio_equity</code>
+- <code>excess_margin</code>
+- <code>excess_maintenance</code>
+- <code>excess_margin_with_uncleared_deposits</code>
+- <code>excess_maintenance_with_uncleared_deposits</code>
+- <code>equity_previous_close</code>
+- <code>portfolio_equity_previous_close</code>
+- <code>adjusted_equity_previous_close</code>
+- <code>adjusted_portfolio_equity_previous_close</code>
+- <code>withdrawable_amount</code>
+- <code>unwithdrawable_deposits</code>
+- <code>unwithdrawable_grants</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodprofilesload_security_profileinfonone"><code>robin_stocks.robinhood.profiles.load_security_profile(info=None)</code></h3>
+<p>Gets the information associated with the security profile.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): The name of the key whose value is to be returned from the function.</p>
+<p><strong>Returns:</strong>
+- A dictionary of key/value pairs. If a string is passed to the <code>info</code> parameter, returns a string corresponding to the value of the key whose name matches the <code>info</code> parameter.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>user</code>
+- <code>object_to_disclosure</code>
+- <code>sweep_consent</code>
+- <code>control_person</code>
+- <code>control_person_security_symbol</code>
+- <code>security_affiliated_employee</code>
+- <code>security_affiliated_firm_relationship</code>
+- <code>security_affiliated_firm_name</code>
+- <code>security_affiliated_person_name</code>
+- <code>security_affiliated_address</code>
+- <code>security_affiliated_address_subject</code>
+- <code>security_affiliated_requires_duplicates</code>
+- <code>stock_loan_consent_status</code>
+- <code>agreed_to_rhs</code>
+- <code>agreed_to_rhs_margin</code>
+- <code>rhs_stock_loan_consent_status</code>
+- <code>updated_at</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodprofilesload_user_profileinfonone"><code>robin_stocks.robinhood.profiles.load_user_profile(info=None)</code></h3>
+<p>Gets the information associated with the user profile, such as username, email, and links to the URLs for other profiles.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): The name of the key whose value is to be returned from the function.</p>
+<p><strong>Returns:</strong>
+- A dictionary of key/value pairs. If a string is passed to the <code>info</code> parameter, returns a string corresponding to the value of the key whose name matches the <code>info</code> parameter.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>url</code>
+- <code>id</code>
+- <code>id_info</code>
+- <code>username</code>
+- <code>email</code>
+- <code>email_verified</code>
+- <code>first_name</code>
+- <code>last_name</code>
+- <code>origin</code>
+- <code>profile_name</code>
+- <code>created_at</code></p>
+<h2 id="getting-stock-information">Getting Stock Information</h2>
+<p>Contains information in regards to stocks.</p>
+<h3 id="robin_stocksrobinhoodstocksfind_instrument_dataquery"><code>robin_stocks.robinhood.stocks.find_instrument_data(query)</code></h3>
+<p>Searches for stocks that contain the query keyword and returns the instrument data.</p>
+<p><strong>Parameters:</strong>
+- <code>query</code> (str): The keyword to search for.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries containing the instrument data for each stock that matches the query.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>id</code>
+- <code>url</code>
+- <code>quote</code>
+- <code>fundamentals</code>
+- <code>splits</code>
+- <code>state</code>
+- <code>market</code>
+- <code>simple_name</code>
+- <code>name</code>
+- <code>tradeable</code>
+- <code>tradability</code>
+- <code>symbol</code>
+- <code>bloomberg_unique</code>
+- <code>margin_initial_ratio</code>
+- <code>maintenance_ratio</code>
+- <code>country</code>
+- <code>day_trade_ratio</code>
+- <code>list_date</code>
+- <code>min_tick_size</code>
+- <code>type</code>
+- <code>tradable_chain_id</code>
+- <code>rhs_tradability</code>
+- <code>fractional_tradability</code>
+- <code>default_collar_fraction</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodstocksget_earningssymbol-infonone"><code>robin_stocks.robinhood.stocks.get_earnings(symbol, info=None)</code></h3>
+<p>Returns the earnings for different financial quarters.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock ticker.
+- <code>info</code> (str, optional): Filters the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>symbol</code>
+- <code>instrument</code>
+- <code>year</code>
+- <code>quarter</code>
+- <code>eps</code>
+- <code>report</code>
+- <code>call</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodstocksget_eventssymbol-infonone"><code>robin_stocks.robinhood.stocks.get_events(symbol, info=None)</code></h3>
+<p>Returns the events related to a stock that the user owns.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock ticker.
+- <code>info</code> (str, optional): Filters the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries. If the <code>info</code> parameter is provided, the function will extract the value of the key that matches the <code>info</code> parameter. Otherwise, the whole dictionary is returned.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>account</code>
+- <code>cash_component</code>
+- <code>chain_id</code>
+- <code>created_at</code>
+- <code>direction</code>
+- <code>equity_components</code>
+- <code>event_date</code>
+- <code>id</code>
+- <code>option</code>
+- <code>position</code>
+- <code>quantity</code>
+- <code>state</code>
+- <code>total_cash_amount</code>
+- <code>type</code>
+- <code>underlying_price</code>
+- <code>updated_at</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodstocksget_fundamentalsinputsymbols-infonone"><code>robin_stocks.robinhood.stocks.get_fundamentals(inputSymbols, info=None)</code></h3>
+<p>Takes any number of stock tickers and returns fundamental information about the stock, such as sector, company description, dividend yield, and market cap.</p>
+<p><strong>Parameters:</strong>
+- <code>inputSymbols</code> (str or list): A single stock ticker or a list of stock tickers.
+- <code>info</code> (str, optional): Filters the results to provide a list of values corresponding to the key that matches <code>info</code>.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries containing key/value pairs for each ticker. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the values of the key that corresponds to <code>info</code>.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>open</code>
+- <code>high</code>
+- <code>low</code>
+- <code>volume</code>
+- <code>average_volume_2_weeks</code>
+- <code>average_volume</code>
+- <code>high_52_weeks</code>
+- <code>dividend_yield</code>
+- <code>float</code>
+- <code>low_52_weeks</code>
+- <code>market_cap</code>
+- <code>pb_ratio</code>
+- <code>pe_ratio</code>
+- <code>shares_outstanding</code>
+- <code>description</code>
+- <code>instrument</code>
+- <code>ceo</code>
+- <code>headquarters_city</code>
+- <code>headquarters_state</code>
+- <code>sector</code>
+- <code>industry</code>
+- <code>num_employees</code>
+- <code>year_founded</code>
+- <code>symbol</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodstocksget_instrument_by_urlurl-infonone"><code>robin_stocks.robinhood.stocks.get_instrument_by_url(url, info=None)</code></h3>
+<p>Takes a single URL for the stock. The URL should be located at <code>https://api.robinhood.com/instruments/&lt;id&gt;</code> where <code>&lt;id&gt;</code> is the ID of the stock.</p>
+<p><strong>Parameters:</strong>
+- <code>url</code> (str): The URL of the stock. Can be found in several locations, including in the dictionary returned from <code>get_instruments_by_symbols(inputSymbols, info=None)</code>.
+- <code>info</code> (str, optional): Filters the results to provide a list of values corresponding to the key that matches <code>info</code>.</p>
+<p><strong>Returns:</strong>
+- If the <code>info</code> parameter is left as <code>None</code>, returns a dictionary of key/value pairs for a specific URL. Otherwise, returns the string value of the key that corresponds to <code>info</code>.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>id</code>
+- <code>url</code>
+- <code>quote</code>
+- <code>fundamentals</code>
+- <code>splits</code>
+- <code>state</code>
+- <code>market</code>
+- <code>simple_name</code>
+- <code>name</code>
+- <code>tradeable</code>
+- <code>tradability</code>
+- <code>symbol</code>
+- <code>bloomberg_unique</code>
+- <code>margin_initial_ratio</code>
+- <code>maintenance_ratio</code>
+- <code>country</code>
+- <code>day_trade_ratio</code>
+- <code>list_date</code>
+- <code>min_tick_size</code>
+- <code>type</code>
+- <code>tradable_chain_id</code>
+- <code>rhs_tradability</code>
+- <code>fractional_tradability</code>
+- <code>default_collar_fraction</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodstocksget_instruments_by_symbolsinputsymbols-infonone"><code>robin_stocks.robinhood.stocks.get_instruments_by_symbols(inputSymbols, info=None)</code></h3>
+<p>Takes any number of stock tickers and returns information held by the market, such as ticker name, Bloomberg ID, and listing date.</p>
+<p><strong>Parameters:</strong>
+- <code>inputSymbols</code> (str or list): A single stock ticker or a list of stock tickers.
+- <code>info</code> (str, optional): Filters the results to provide a list of values corresponding to the key that matches <code>info</code>.</p>
+<p><strong>Returns:</strong>
+- If the <code>info</code> parameter is left as <code>None</code>, returns a list of dictionaries containing key/value pairs for each ticker. Otherwise, returns a list of strings where the strings are the values of the key that corresponds to <code>info</code>.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>id</code>
+- <code>url</code>
+- <code>quote</code>
+- <code>fundamentals</code>
+- <code>splits</code>
+- <code>state</code>
+- <code>market</code>
+- <code>simple_name</code>
+- <code>name</code>
+- <code>tradeable</code>
+- <code>tradability</code>
+- <code>symbol</code>
+- <code>bloomberg_unique</code>
+- <code>margin_initial_ratio</code>
+- <code>maintenance_ratio</code>
+- <code>country</code>
+- <code>day_trade_ratio</code>
+- <code>list_date</code>
+- <code>min_tick_size</code>
+- <code>type</code>
+- <code>tradable_chain_id</code>
+- <code>rhs_tradability</code>
+- <code>fractional_tradability</code>
+- <code>default_collar_fraction</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodstocksget_latest_priceinputsymbols-pricetypenone-includeextendedhourstrue"><code>robin_stocks.robinhood.stocks.get_latest_price(inputSymbols, priceType=None, includeExtendedHours=True)</code></h3>
+<p>Takes any number of stock tickers and returns the latest price of each one as a string.</p>
+<p><strong>Parameters:</strong>
+- <code>inputSymbols</code> (str or list): A single stock ticker or a list of stock tickers.
+- <code>priceType</code> (str, optional): Can either be <code>'ask_price'</code> or <code>'bid_price'</code>. If this parameter is set, then <code>includeExtendedHours</code> is ignored.
+- <code>includeExtendedHours</code> (bool): If <code>True</code>, returns the extended hours price if available; if <code>False</code>, returns only regular hours price.</p>
+<p><strong>Returns:</strong>
+- A list of prices as strings.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodstocksget_name_by_symbolsymbol"><code>robin_stocks.robinhood.stocks.get_name_by_symbol(symbol)</code></h3>
+<p>Returns the name of a stock from the stock ticker.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The ticker of the stock.</p>
+<p><strong>Returns:</strong>
+- A string containing the simple name of the stock. If the simple name does not exist, returns the full name.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodstocksget_name_by_urlurl"><code>robin_stocks.robinhood.stocks.get_name_by_url(url)</code></h3>
+<p>Returns the name of a stock from the instrument URL. The URL should be located at <code>https://api.robinhood.com/instruments/&lt;id&gt;</code> where <code>&lt;id&gt;</code> is the ID of the stock.</p>
+<p><strong>Parameters:</strong>
+- <code>url</code> (str): The URL of the stock.</p>
+<p><strong>Returns:</strong>
+- A string containing the simple name of the stock. If the simple name does not exist, returns the full name.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodstocksget_newssymbol-infonone"><code>robin_stocks.robinhood.stocks.get_news(symbol, info=None)</code></h3>
+<p>Returns news stories for a stock.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock ticker.
+- <code>info</code> (str, optional): Filters the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>api_source</code>
+- <code>author</code>
+- <code>num_clicks</code>
+- <code>preview_image_url</code>
+- <code>published_at</code>
+- <code>relay_url</code>
+- <code>source</code>
+- <code>summary</code>
+- <code>title</code>
+- <code>updated_at</code>
+- <code>url</code>
+- <code>uuid</code>
+- <code>related_instruments</code>
+- <code>preview_text</code>
+- <code>currency_id</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodstocksget_pricebook_by_idstock_id-infonone"><code>robin_stocks.robinhood.stocks.get_pricebook_by_id(stock_id, info=None)</code></h3>
+<p>Represents Level II Market Data provided for Gold subscribers.</p>
+<p><strong>Parameters:</strong>
+- <code>stock_id</code> (str): The Robinhood stock ID.
+- <code>info</code> (str, optional): Filters the results to get a specific value. Possible options are <code>url</code>, <code>instrument</code>, <code>execution_date</code>, <code>divisor</code>, and <code>multiplier</code>.</p>
+<p><strong>Returns:</strong>
+- A dictionary of asks and bids.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodstocksget_pricebook_by_symbolsymbol-infonone"><code>robin_stocks.robinhood.stocks.get_pricebook_by_symbol(symbol, info=None)</code></h3>
+<p>Represents Level II Market Data provided for Gold subscribers.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock symbol.
+- <code>info</code> (str, optional): Filters the results to get a specific value. Possible options are <code>url</code>, <code>instrument</code>, <code>execution_date</code>, <code>divisor</code>, and <code>multiplier</code>.</p>
+<p><strong>Returns:</strong>
+- A dictionary of asks and bids.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodstocksget_quotesinputsymbols-infonone"><code>robin_stocks.robinhood.stocks.get_quotes(inputSymbols, info=None)</code></h3>
+<p>Takes any number of stock tickers and returns information pertaining to their price.</p>
+<p><strong>Parameters:</strong>
+- <code>inputSymbols</code> (str or list): A single stock ticker or a list of stock tickers.
+- <code>info</code> (str, optional): Filters the results to provide a list of values corresponding to the key that matches <code>info</code>.</p>
+<p><strong>Returns:</strong>
+- If the <code>info</code> parameter is left as <code>None</code>, returns a list of dictionaries containing key/value pairs for each ticker. Otherwise, returns a list of strings where the strings are the values of the key that corresponds to <code>info</code>.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>ask_price</code>
+- <code>ask_size</code>
+- <code>bid_price</code>
+- <code>bid_size</code>
+- <code>last_trade_price</code>
+- <code>last_extended_hours_trade_price</code>
+- <code>previous_close</code>
+- <code>adjusted_previous_close</code>
+- <code>previous_close_date</code>
+- <code>symbol</code>
+- <code>trading_halted</code>
+- <code>has_traded</code>
+- <code>last_trade_price_source</code>
+- <code>updated_at</code>
+- <code>instrument</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodstocksget_ratingssymbol-infonone"><code>robin_stocks.robinhood.stocks.get_ratings(symbol, info=None)</code></h3>
+<p>Returns the ratings for a stock, including the number of buy, hold, and sell ratings.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock ticker.
+- <code>info</code> (str, optional): Filters the results to contain a dictionary of values corresponding to the key that matches <code>info</code>. Possible values are <code>summary</code>, <code>ratings</code>, and <code>instrument_id</code>.</p>
+<p><strong>Returns:</strong>
+- A dictionary containing ratings. If the <code>info</code> parameter is provided, the dictionary will contain values corresponding to the key that matches <code>info</code>.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>summary</code> (dict)
+- <code>ratings</code> (list of dicts)
+- <code>instrument_id</code> (str)
+- <code>ratings_published_at</code> (str)</p>
+<hr />
+<h3 id="robin_stocksrobinhoodstocksget_splitssymbol-infonone"><code>robin_stocks.robinhood.stocks.get_splits(symbol, info=None)</code></h3>
+<p>Returns the date, divisor, and multiplier for when a stock split occurred.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock ticker.
+- <code>info</code> (str, optional): Filters the results to get a specific value. Possible options are <code>url</code>, <code>instrument</code>, <code>execution_date</code>, <code>divisor</code>, and <code>multiplier</code>.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>url</code>
+- <code>instrument</code>
+- <code>execution_date</code>
+- <code>multiplier</code>
+- <code>divisor</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodstocksget_stock_historicalsinputsymbols-intervalhour-spanweek-boundsregular-infonone"><code>robin_stocks.robinhood.stocks.get_stock_historicals(inputSymbols, interval='hour', span='week', bounds='regular', info=None)</code></h3>
+<p>Represents the historical data for a stock.</p>
+<p><strong>Parameters:</strong>
+- <code>inputSymbols</code> (str or list): A single stock ticker or a list of stock tickers.
+- <code>interval</code> (str, optional): Interval to retrieve data for. Possible values are <code>'5minute'</code>, <code>'10minute'</code>, <code>'hour'</code>, <code>'day'</code>, <code>'week'</code>. Default is <code>'hour'</code>.
+- <code>span</code> (str, optional): Sets the range of the data to be either <code>'day'</code>, <code>'week'</code>, <code>'month'</code>, <code>'3month'</code>, <code>'year'</code>, or <code>'5year'</code>. Default is <code>'week'</code>.
+- <code>bounds</code> (str, optional): Represents whether the graph will include extended trading hours or just regular trading hours. Possible values are <code>'regular'</code>, <code>'trading'</code>, and <code>'extended'</code>. Default is <code>'regular'</code>.
+- <code>info</code> (str, optional): Filters the results to provide a list of values corresponding to the key that matches <code>info</code>.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries where each dictionary is for a different time. If multiple stocks are provided, the historical data is listed one after another.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>begins_at</code>
+- <code>open_price</code>
+- <code>close_price</code>
+- <code>high_price</code>
+- <code>low_price</code>
+- <code>volume</code>
+- <code>session</code>
+- <code>interpolated</code>
+- <code>symbol</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodstocksget_stock_quote_by_idstock_id-infonone"><code>robin_stocks.robinhood.stocks.get_stock_quote_by_id(stock_id, info=None)</code></h3>
+<p>Represents basic stock quote information.</p>
+<p><strong>Parameters:</strong>
+- <code>stock_id</code> (str): The Robinhood stock ID.
+- <code>info</code> (str, optional): Filters the results to get a specific value. Possible options are <code>url</code>, <code>instrument</code>, <code>execution_date</code>, <code>divisor</code>, and <code>multiplier</code>.</p>
+<p><strong>Returns:</strong>
+- A dictionary containing basic stock quote information. If the <code>info</code> parameter is provided, the dictionary will contain values corresponding to the key that matches <code>info</code>.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>ask_price</code>
+- <code>ask_size</code>
+- <code>bid_price</code>
+- <code>bid_size</code>
+- <code>last_trade_price</code>
+- <code>last_extended_hours_trade_price</code>
+- <code>previous_close</code>
+- <code>adjusted_previous_close</code>
+- <code>previous_close_date</code>
+- <code>symbol</code>
+- <code>trading_halted</code>
+- <code>has_traded</code>
+- <code>last_trade_price_source</code>
+- <code>updated_at</code>
+- <code>instrument</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodstocksget_stock_quote_by_symbolsymbol-infonone"><code>robin_stocks.robinhood.stocks.get_stock_quote_by_symbol(symbol, info=None)</code></h3>
+<p>Represents basic stock quote information.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock ticker.
+- <code>info</code> (str, optional): Filters the results to get a specific value. Possible options are <code>url</code>, <code>instrument</code>, <code>execution_date</code>, <code>divisor</code>, and <code>multiplier</code>.</p>
+<p><strong>Returns:</strong>
+- A dictionary containing basic stock quote information. If the <code>info</code> parameter is provided, the dictionary will contain values corresponding to the key that matches <code>info</code>.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>ask_price</code>
+- <code>ask_size</code>
+- <code>bid_price</code>
+- <code>bid_size</code>
+- <code>last_trade_price</code>
+- <code>last_extended_hours_trade_price</code>
+- <code>previous_close</code>
+- <code>adjusted_previous_close</code>
+- <code>previous_close_date</code>
+- <code>symbol</code>
+- <code>trading_halted</code>
+- <code>has_traded</code>
+- <code>last_trade_price_source</code>
+- <code>updated_at</code>
+- <code>instrument</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodstocksget_symbol_by_urlurl"><code>robin_stocks.robinhood.stocks.get_symbol_by_url(url)</code></h3>
+<p>Returns the symbol of a stock from the instrument URL. The URL should be located at <code>https://api.robinhood.com/instruments/&lt;id&gt;</code> where <code>&lt;id&gt;</code> is the ID of the stock.</p>
+<p><strong>Parameters:</strong>
+- <code>url</code> (str): The URL of the stock.</p>
+<p><strong>Returns:</strong>
+- A string containing the ticker symbol of the stock.</p>
+<h2 id="getting-option-information">Getting Option Information</h2>
+<p>Contains functions for getting information about options.</p>
+<h3 id="robin_stocksrobinhoodoptionsfind_options_by_expirationinputsymbols-expirationdate-optiontypenone-infonone"><code>robin_stocks.robinhood.options.find_options_by_expiration(inputSymbols, expirationDate, optionType=None, info=None)</code></h3>
+<p>Returns a list of all the option orders that match the search parameters.</p>
+<p><strong>Parameters:</strong>
+- <code>inputSymbols</code> (str): The ticker of either a single stock or a list of stocks.
+- <code>expirationDate</code> (str): The expiration date in the format <code>YYYY-MM-DD</code>.
+- <code>optionType</code> (str, optional): Can be either <code>'call'</code> or <code>'put'</code> or left blank to get both.
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for all options of the stock that match the search parameters. If <code>info</code> is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodoptionsfind_options_by_expiration_and_strikeinputsymbols-expirationdate-strikeprice-optiontypenone-infonone"><code>robin_stocks.robinhood.options.find_options_by_expiration_and_strike(inputSymbols, expirationDate, strikePrice, optionType=None, info=None)</code></h3>
+<p>Returns a list of all the option orders that match the search parameters.</p>
+<p><strong>Parameters:</strong>
+- <code>inputSymbols</code> (str): The ticker of either a single stock or a list of stocks.
+- <code>expirationDate</code> (str): The expiration date in the format <code>YYYY-MM-DD</code>.
+- <code>strikePrice</code> (str): The strike price to filter for.
+- <code>optionType</code> (str, optional): Can be either <code>'call'</code> or <code>'put'</code> or left blank to get both.
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for all options of the stock that match the search parameters. If <code>info</code> is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodoptionsfind_options_by_specific_profitabilityinputsymbols-expirationdatenone-strikepricenone-optiontypenone-typeprofitchance_of_profit_short-profitfloor00-profitceiling10-infonone"><code>robin_stocks.robinhood.options.find_options_by_specific_profitability(inputSymbols, expirationDate=None, strikePrice=None, optionType=None, typeProfit='chance_of_profit_short', profitFloor=0.0, profitCeiling=1.0, info=None)</code></h3>
+<p>Returns a list of option market data for several stock tickers that match a range of profitability.</p>
+<p><strong>Parameters:</strong>
+- <code>inputSymbols</code> (str or list): A single stock ticker or a list of stock tickers.
+- <code>expirationDate</code> (str, optional): The expiration date in the format <code>YYYY-MM-DD</code>. Leave as <code>None</code> to get all available dates.
+- <code>strikePrice</code> (str, optional): The price of the option. Leave as <code>None</code> to get all available strike prices.
+- <code>optionType</code> (str, optional): Can be either <code>'call'</code> or <code>'put'</code> or left blank to get both.
+- <code>typeProfit</code> (str): Will either be <code>'chance_of_profit_short'</code> or <code>'chance_of_profit_long'</code>.
+- <code>profitFloor</code> (int): The lower percentage on a scale of 0 to 1.
+- <code>profitCeiling</code> (int): The higher percentage on a scale of 0 to 1.
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for all stock option market data. If <code>info</code> is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodoptionsfind_options_by_strikeinputsymbols-strikeprice-optiontypenone-infonone"><code>robin_stocks.robinhood.options.find_options_by_strike(inputSymbols, strikePrice, optionType=None, info=None)</code></h3>
+<p>Returns a list of all the option orders that match the search parameters.</p>
+<p><strong>Parameters:</strong>
+- <code>inputSymbols</code> (str): The ticker of either a single stock or a list of stocks.
+- <code>strikePrice</code> (str): The strike price to filter for.
+- <code>optionType</code> (str, optional): Can be either <code>'call'</code> or <code>'put'</code> or left blank to get both.
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for all options of the stock that match the search parameters. If <code>info</code> is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodoptionsfind_tradable_optionssymbol-expirationdatenone-strikepricenone-optiontypenone-infonone"><code>robin_stocks.robinhood.options.find_tradable_options(symbol, expirationDate=None, strikePrice=None, optionType=None, info=None)</code></h3>
+<p>Returns a list of all available options for a stock.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The ticker of the stock.
+- <code>expirationDate</code> (str, optional): The expiration date in the format <code>YYYY-MM-DD</code>.
+- <code>strikePrice</code> (str, optional): The strike price of the option.
+- <code>optionType</code> (str, optional): Can be either <code>'call'</code> or <code>'put'</code> or left blank to get both.
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for all calls of the stock. If <code>info</code> is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodoptionsget_aggregate_open_positionsinfonone-account_numbernone"><code>robin_stocks.robinhood.options.get_aggregate_open_positions(info=None, account_number=None)</code></h3>
+<p>Collapses all open option positions for a stock into a single dictionary.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): Will filter the results to get a specific value.
+- <code>account_number</code> (str, optional): The Robinhood account number.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for each order. If <code>info</code> is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodoptionsget_aggregate_positionsinfonone-account_numbernone"><code>robin_stocks.robinhood.options.get_aggregate_positions(info=None, account_number=None)</code></h3>
+<p>Collapses all option orders for a stock into a single dictionary.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): Will filter the results to get a specific value.
+- <code>account_number</code> (str, optional): The Robinhood account number.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for each order. If <code>info</code> is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodoptionsget_all_option_positionsinfonone-account_numbernone"><code>robin_stocks.robinhood.options.get_all_option_positions(info=None, account_number=None)</code></h3>
+<p>Returns all option positions ever held for the account.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): Will filter the results to get a specific value.
+- <code>account_number</code> (str, optional): The Robinhood account number.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for each option. If <code>info</code> is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodoptionsget_chainssymbol-infonone"><code>robin_stocks.robinhood.options.get_chains(symbol, info=None)</code></h3>
+<p>Returns the chain information of an option.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The ticker of the stock.
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A dictionary of key/value pairs for the option. If <code>info</code> is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodoptionsget_market_optionsinfonone"><code>robin_stocks.robinhood.options.get_market_options(info=None)</code></h3>
+<p>Returns a list of all options.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for each option. If <code>info</code> is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodoptionsget_open_option_positionsaccount_numbernone-infonone"><code>robin_stocks.robinhood.options.get_open_option_positions(account_number=None, info=None)</code></h3>
+<p>Returns all open option positions for the account.</p>
+<p><strong>Parameters:</strong>
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for each option. If <code>info</code> is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodoptionsget_option_historicalssymbol-expirationdate-strikeprice-optiontype-intervalhour-spanweek-boundsregular-infonone"><code>robin_stocks.robinhood.options.get_option_historicals(symbol, expirationDate, strikePrice, optionType, interval='hour', span='week', bounds='regular', info=None)</code></h3>
+<p>Returns the data that is used to make the graphs.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The ticker of the stock.
+- <code>expirationDate</code> (str): The expiration date in the format <code>YYYY-MM-DD</code>.
+- <code>strikePrice</code> (str): The price of the option.
+- <code>optionType</code> (str): Can be either <code>'call'</code> or <code>'put'</code>.
+- <code>interval</code> (str, optional): Interval to retrieve data for. Possible values are <code>'5minute'</code>, <code>'10minute'</code>, <code>'hour'</code>, <code>'day'</code>, <code>'week'</code>. Default is <code>'hour'</code>.
+- <code>span</code> (str, optional): Sets the range of the data to be either <code>'day'</code>, <code>'week'</code>, <code>'year'</code>, or <code>'5year'</code>. Default is <code>'week'</code>.
+- <code>bounds</code> (str, optional): Represents whether the graph will include extended trading hours or just regular trading hours. Possible values are <code>'regular'</code>, <code>'trading'</code>, and <code>'extended'</code>. Default is <code>'regular'</code>.
+- <code>info</code> (str, optional): Will filter the results to provide a</p>
+<p>list of values corresponding to the key that matches <code>info</code>.</p>
+<p><strong>Returns:</strong>
+- A list that contains a list for each symbol. Each list contains a dictionary where each dictionary is for a different time.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodoptionsget_option_instrument_datasymbol-expirationdate-strikeprice-optiontype-infonone"><code>robin_stocks.robinhood.options.get_option_instrument_data(symbol, expirationDate, strikePrice, optionType, info=None)</code></h3>
+<p>Returns the option instrument data for the stock option.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The ticker of the stock.
+- <code>expirationDate</code> (str): The expiration date in the format <code>YYYY-MM-DD</code>.
+- <code>strikePrice</code> (str): The price of the option.
+- <code>optionType</code> (str): Can be either <code>'call'</code> or <code>'put'</code>.
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A dictionary of key/value pairs for the stock. If <code>info</code> is provided, the value of the key that matches <code>info</code> is extracted.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodoptionsget_option_instrument_data_by_idid-infonone"><code>robin_stocks.robinhood.options.get_option_instrument_data_by_id(id, info=None)</code></h3>
+<p>Returns the option instrument information.</p>
+<p><strong>Parameters:</strong>
+- <code>id</code> (str): The ID of the stock.
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A dictionary of key/value pairs for the stock. If <code>info</code> is provided, the value of the key that matches <code>info</code> is extracted.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodoptionsget_option_market_datainputsymbols-expirationdate-strikeprice-optiontype-infonone"><code>robin_stocks.robinhood.options.get_option_market_data(inputSymbols, expirationDate, strikePrice, optionType, info=None)</code></h3>
+<p>Returns the option market data for the stock option, including the greeks, open interest, chance of profit, and adjusted mark price.</p>
+<p><strong>Parameters:</strong>
+- <code>inputSymbols</code> (str): The ticker of the stock.
+- <code>expirationDate</code> (str): The expiration date in the format <code>YYYY-MM-DD</code>.
+- <code>strikePrice</code> (str): The price of the option.
+- <code>optionType</code> (str): Can be either <code>'call'</code> or <code>'put'</code>.
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A dictionary of key/value pairs for the stock. If <code>info</code> is provided, the value of the key that matches <code>info</code> is extracted.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodoptionsget_option_market_data_by_idid-infonone"><code>robin_stocks.robinhood.options.get_option_market_data_by_id(id, info=None)</code></h3>
+<p>Returns the option market data for a stock, including the greeks, open interest, chance of profit, and adjusted mark price.</p>
+<p><strong>Parameters:</strong>
+- <code>id</code> (str): The ID of the stock.
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A dictionary of key/value pairs for the stock. If <code>info</code> is provided, the value of the key that matches <code>info</code> is extracted.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodoptionsspinning_cursor"><code>robin_stocks.robinhood.options.spinning_cursor()</code></h3>
+<p>This is a generator function to yield a character.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodoptionswrite_spinner"><code>robin_stocks.robinhood.options.write_spinner()</code></h3>
+<p>Function to create a spinning cursor to indicate that the code is working on getting market data.</p>
+<h2 id="get-market-information">Get Market Information</h2>
+<p>Contains functions for getting market level data.</p>
+<h3 id="robin_stocksrobinhoodmarketsget_all_stocks_from_market_tagtag-infonone"><code>robin_stocks.robinhood.markets.get_all_stocks_from_market_tag(tag, info=None)</code></h3>
+<p>Returns all the stock quote information that matches a tag category.</p>
+<p><strong>Parameters:</strong>
+- <code>tag</code> (str): The category to filter for. Examples include <code>'biopharmaceutical'</code>, <code>'upcoming-earnings'</code>, <code>'most-popular-under-25'</code>, and <code>'technology'</code>.
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries containing key/value pairs for each mover. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>ask_price</code>
+- <code>ask_size</code>
+- <code>bid_price</code>
+- <code>bid_size</code>
+- <code>last_trade_price</code>
+- <code>last_extended_hours_trade_price</code>
+- <code>previous_close</code>
+- <code>adjusted_previous_close</code>
+- <code>previous_close_date</code>
+- <code>symbol</code>
+- <code>trading_halted</code>
+- <code>has_traded</code>
+- <code>last_trade_price_source</code>
+- <code>updated_at</code>
+- <code>instrument</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodmarketsget_currency_pairsinfonone"><code>robin_stocks.robinhood.markets.get_currency_pairs(info=None)</code></h3>
+<p>Returns currency pairs.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries containing key/value pairs for each currency pair. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>asset_currency</code>
+- <code>display_only</code>
+- <code>id</code>
+- <code>max_order_size</code>
+- <code>min_order_size</code>
+- <code>min_order_price_increment</code>
+- <code>min_order_quantity_increment</code>
+- <code>name</code>
+- <code>quote_currency</code>
+- <code>symbol</code>
+- <code>tradability</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodmarketsget_market_hoursmarket-date-infonone"><code>robin_stocks.robinhood.markets.get_market_hours(market, date, info=None)</code></h3>
+<p>Returns the opening and closing hours of a specific market on a specific date. Also indicates if the market is open on that date. Can be used with past or future dates.</p>
+<p><strong>Parameters:</strong>
+- <code>market</code> (str): The <code>'mic'</code> value for the market. Can be found using <code>get_markets()</code>.
+- <code>date</code> (str): The date for which you want information in the format <code>YYYY-MM-DD</code>.
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A dictionary containing key/value pairs for the specific market. If the <code>info</code> parameter is provided, the string value for the corresponding key is returned.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>date</code>
+- <code>is_open</code>
+- <code>opens_at</code>
+- <code>closes_at</code>
+- <code>extended_opens_at</code>
+- <code>extended_closes_at</code>
+- <code>previous_open_hours</code>
+- <code>next_open_hours</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodmarketsget_market_next_open_hoursmarket-infonone"><code>robin_stocks.robinhood.markets.get_market_next_open_hours(market, info=None)</code></h3>
+<p>Returns the opening and closing hours for the next open trading day after today. Also indicates if the market is open on that date.</p>
+<p><strong>Parameters:</strong>
+- <code>market</code> (str): The <code>'mic'</code> value for the market. Can be found using <code>get_markets()</code>.
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A dictionary containing key/value pairs for the specific market. If the <code>info</code> parameter is provided, the string value for the corresponding key is returned.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>date</code>
+- <code>is_open</code>
+- <code>opens_at</code>
+- <code>closes_at</code>
+- <code>extended_opens_at</code>
+- <code>extended_closes_at</code>
+- <code>previous_open_hours</code>
+- <code>next_open_hours</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodmarketsget_market_next_open_hours_after_datemarket-date-infonone"><code>robin_stocks.robinhood.markets.get_market_next_open_hours_after_date(market, date, info=None)</code></h3>
+<p>Returns the opening and closing hours for the next open trading day after a specified date. Also indicates if the market is open on that date.</p>
+<p><strong>Parameters:</strong>
+- <code>market</code> (str): The <code>'mic'</code> value for the market. Can be found using <code>get_markets()</code>.
+- <code>date</code> (str): The date you want to find the next available trading day after, in the format <code>YYYY-MM-DD</code>.
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A dictionary containing key/value pairs for the specific market. If the <code>info</code> parameter is provided, the string value for the corresponding key is returned.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>date</code>
+- <code>is_open</code>
+- <code>opens_at</code>
+- <code>closes_at</code>
+- <code>extended_opens_at</code>
+- <code>extended_closes_at</code>
+- <code>previous_open_hours</code>
+- <code>next_open_hours</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodmarketsget_market_today_hoursmarket-infonone"><code>robin_stocks.robinhood.markets.get_market_today_hours(market, info=None)</code></h3>
+<p>Returns the opening and closing hours of a specific market for today. Also indicates if the market is open on that date.</p>
+<p><strong>Parameters:</strong>
+- <code>market</code> (str): The <code>'mic'</code> value for the market. Can be found using <code>get_markets()</code>.
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A dictionary containing key/value pairs for the specific market. If the <code>info</code> parameter is provided, the string value for the corresponding key is returned.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>date</code>
+- <code>is_open</code>
+- <code>opens_at</code>
+- <code>closes_at</code>
+- <code>extended_opens_at</code>
+- <code>extended_closes_at</code>
+- <code>previous_open_hours</code>
+- <code>next_open_hours</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodmarketsget_marketsinfonone"><code>robin_stocks.robinhood.markets.get_markets(info=None)</code></h3>
+<p>Returns a list of available markets.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries containing key/value pairs for each market. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>url</code>
+- <code>todays_hours</code>
+- <code>mic</code>
+- <code>operating_mic</code>
+- <code>acronym</code>
+- <code>name</code>
+- <code>city</code>
+- <code>country</code>
+- <code>timezone</code>
+- <code>website</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodmarketsget_top_100infonone"><code>robin_stocks.robinhood.markets.get_top_100(info=None)</code></h3>
+<p>Returns a list of the Top 100 stocks on Robinhood.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries containing key/value pairs for each mover. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>ask_price</code>
+- <code>ask_size</code>
+- <code>bid_price</code>
+- <code>bid_size</code>
+- <code>last_trade_price</code>
+- <code>last_extended_hours_trade_price</code>
+- <code>previous_close</code>
+- <code>adjusted_previous_close</code>
+- <code>previous_close_date</code>
+- <code>symbol</code>
+- <code>trading_halted</code>
+- <code>has_traded</code>
+- <code>last_trade_price_source</code>
+- <code>updated_at</code>
+- <code>instrument</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodmarketsget_top_moversinfonone"><code>robin_stocks.robinhood.markets.get_top_movers(info=None)</code></h3>
+<p>Returns a list of the Top 20 movers on Robinhood.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries containing key/value pairs for each mover. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>ask_price</code>
+- <code>ask_size</code>
+- <code>bid_price</code>
+- <code>bid_size</code>
+- <code>last_trade_price</code>
+- <code>last_extended_hours_trade_price</code>
+- <code>previous_close</code>
+- <code>adjusted_previous_close</code>
+- <code>previous_close_date</code>
+- <code>symbol</code>
+- <code>trading_halted</code>
+- <code>has_traded</code>
+- <code>last_trade_price_source</code>
+- <code>updated_at</code>
+- <code>instrument</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodmarketsget_top_movers_sp500direction-infonone"><code>robin_stocks.robinhood.markets.get_top_movers_sp500(direction, info=None)</code></h3>
+<p>Returns a list of the top S&amp;P 500 movers up or down for the day.</p>
+<p><strong>Parameters:</strong>
+- <code>direction</code> (str): The direction of movement, either <code>'up'</code> or <code>'down'</code>.
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries containing key/value pairs for each mover. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>instrument_url</code>
+- <code>symbol</code>
+- <code>updated_at</code>
+- <code>price_movement</code>
+- <code>description</code></p>
+<h2 id="getting-positions-and-account-information">Getting Positions and Account Information</h2>
+<p>Contains functions for getting information related to the user account.</p>
+<h3 id="robin_stocksrobinhoodaccountbuild_holdingswith_dividendsfalse"><code>robin_stocks.robinhood.account.build_holdings(with_dividends=False)</code></h3>
+<p>Builds a dictionary of important information regarding the stocks and positions owned by the user.</p>
+<p><strong>Parameters:</strong>
+- <code>with_dividends</code> (bool): True if you want to include dividend information.</p>
+<p><strong>Returns:</strong>
+- A dictionary where the keys are the stock tickers, and the value is another dictionary that includes the stock price, quantity held, equity, percent change, equity change, type, name, ID, PE ratio, percentage of portfolio, and average buy price.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountbuild_user_profileaccount_numbernone"><code>robin_stocks.robinhood.account.build_user_profile(account_number=None)</code></h3>
+<p>Builds a dictionary of important information regarding the user account.</p>
+<p><strong>Returns:</strong>
+- A dictionary that has total equity, extended hours equity, cash, and dividend total.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountdelete_symbols_from_watchlistinputsymbols-namemy-first-list"><code>robin_stocks.robinhood.account.delete_symbols_from_watchlist(inputSymbols, name='My First List')</code></h3>
+<p>Deletes multiple stock tickers from a watchlist.</p>
+<p><strong>Parameters:</strong>
+- <code>inputSymbols</code> (str or list): May be a single stock ticker or a list of stock tickers.
+- <code>name</code> (str, optional): The name of the watchlist to delete data from.</p>
+<p><strong>Returns:</strong>
+- Result of the delete request.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountdeposit_funds_to_robinhood_accountach_relationship-amount-infonone"><code>robin_stocks.robinhood.account.deposit_funds_to_robinhood_account(ach_relationship, amount, info=None)</code></h3>
+<p>Submits a post request to deposit a certain amount of money from a bank account to Robinhood.</p>
+<p><strong>Parameters:</strong>
+- <code>ach_relationship</code> (str): The URL of the bank account you want to deposit the money from.
+- <code>amount</code> (float): The amount of money you wish to deposit.
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for the transaction.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountdownload_all_documentsdoctypenone-dirpathnone"><code>robin_stocks.robinhood.account.download_all_documents(doctype=None, dirpath=None)</code></h3>
+<p>Downloads all the documents associated with an account and saves them as a PDF. If no name is given, the document is saved as a combination of the creation date, type, and ID. If no directory is given, the document is saved in the root directory of the code.</p>
+<p><strong>Parameters:</strong>
+- <code>doctype</code> (str, optional): The type of document to download, such as an account statement.
+- <code>dirpath</code> (str, optional): The directory where to save the documents.</p>
+<p><strong>Returns:</strong>
+- The list of documents from <code>get_documents(info=None)</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountdownload_documenturl-namenone-dirpathnone"><code>robin_stocks.robinhood.account.download_document(url, name=None, dirpath=None)</code></h3>
+<p>Downloads a document and saves as it as a PDF. If no name is given, the document is saved as the name that Robinhood has for the document. If no directory is given, the document is saved in the root directory of the code.</p>
+<p><strong>Parameters:</strong>
+- <code>url</code> (str): The URL of the document. Can be found by using <code>get_documents(info='download_url')</code>.
+- <code>name</code> (str, optional): The name to save the document as.
+- <code>dirpath</code> (str, optional): The directory where to save the document.</p>
+<p><strong>Returns:</strong>
+- The data from the GET request.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountget_all_positionsinfonone"><code>robin_stocks.robinhood.account.get_all_positions(info=None)</code></h3>
+<p>Returns a list containing every position ever traded.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries containing key/value pairs for each ticker. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>url</code>
+- <code>instrument</code>
+- <code>account</code>
+- <code>account_number</code>
+- <code>average_buy_price</code>
+- <code>pending_average_buy_price</code>
+- <code>quantity</code>
+- <code>intraday_average_buy_price</code>
+- <code>intraday_quantity</code>
+- <code>shares_held_for_buys</code>
+- <code>shares_held_for_sells</code>
+- <code>shares_held_for_stock_grants</code>
+- <code>shares_held_for_options_collateral</code>
+- <code>shares_held_for_options_events</code>
+- <code>shares_pending_from_options_events</code>
+- <code>updated_at</code>
+- <code>created_at</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountget_all_watchlistsinfonone"><code>robin_stocks.robinhood.account.get_all_watchlists(info=None)</code></h3>
+<p>Returns a list of all watchlists that have been created. Everyone has a 'My First List' watchlist.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of the watchlists. Keywords are <code>url</code>, <code>user</code>, and <code>name</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountget_bank_account_infoid-infonone"><code>robin_stocks.robinhood.account.get_bank_account_info(id, info=None)</code></h3>
+<p>Returns a single dictionary of bank information.</p>
+<p><strong>Parameters:</strong>
+- <code>id</code> (str): The bank ID.
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A dictionary of key/value pairs for the bank. If the <code>info</code> parameter is provided, the value of the key that matches <code>info</code> is extracted.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountget_bank_transfersdirectionnone-infonone"><code>robin_stocks.robinhood.account.get_bank_transfers(direction=None, info=None)</code></h3>
+<p>Returns all bank transfers made for the account.</p>
+<p><strong>Parameters:</strong>
+- <code>direction</code> (str, optional): Possible values are 'received'. If left blank, the function will return all withdrawals and deposits that are initiated from Robinhood. If the value is 'received', the function will return transfers initiated from your bank rather than Robinhood.
+- <code>info</code> (str, optional): Will filter the results to get a specific value. 'Direction' gives if it was a deposit or withdrawal.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries containing key/value pairs for each transfer. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountget_card_transactionscardtypenone-infonone"><code>robin_stocks.robinhood.account.get_card_transactions(cardType=None, info=None)</code></h3>
+<p>Returns all debit card transactions made on the account.</p>
+<p><strong>Parameters:</strong>
+- <code>cardType</code> (str, optional): Will filter the card transaction types. Can be 'pending' or 'settled'.
+- <code>info</code> (str, optional): Will filter the results to get a specific value. 'Direction' gives if it was a debit or credit.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries containing key/value pairs for each transaction. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountget_day_tradesinfonone"><code>robin_stocks.robinhood.account.get_day_trades(info=None)</code></h3>
+<p>Returns recent day trades.</p>
+<p>Parameters:
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p>Returns:
+- A list of dictionaries containing key/value pairs for each day trade. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountget_dividendsinfonone"><code>robin_stocks.robinhood.account.get_dividends(info=None)</code></h3>
+<p>Returns a list of dividend transactions that include information such as the percentage rate, amount, shares of held stock, and date paid.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for each dividend payment. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>id</code>
+- <code>url</code>
+- <code>account</code>
+- <code>instrument</code>
+- <code>amount</code>
+- <code>rate</code>
+- <code>position</code>
+- <code>withholding</code>
+- <code>record_date</code>
+- <code>payable_date</code>
+- <code>paid_at</code>
+- <code>state</code>
+- <code>nra_withholding</code>
+- <code>drip_enabled</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountget_dividends_by_instrumentinstrument-dividend_data"><code>robin_stocks.robinhood.account.get_dividends_by_instrument(instrument, dividend_data)</code></h3>
+<p>Returns a dictionary with three fields when given the instrument value for a stock.</p>
+<p><strong>Parameters:</strong>
+- <code>instrument</code> (str): The instrument to get the dividend data.
+- <code>dividend_data</code> (list): The information returned by <code>get_dividends()</code>.</p>
+<p><strong>Returns:</strong>
+- <code>dividend_rate</code>: The rate paid for a single share of a specified stock.
+- <code>total_dividend</code>: The total dividend paid based on total shares for a specified stock.
+- <code>amount_paid_to_date</code>: Total amount earned by the account for this particular stock.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountget_documentsinfonone"><code>robin_stocks.robinhood.account.get_documents(info=None)</code></h3>
+<p>Returns a list of documents that have been released by Robinhood to the account.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for each document. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountget_interest_paymentsinfonone"><code>robin_stocks.robinhood.account.get_interest_payments(info=None)</code></h3>
+<p>Returns a list of interest payments.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for each interest payment. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountget_latest_notification"><code>robin_stocks.robinhood.account.get_latest_notification()</code></h3>
+<p>Returns the time of the latest notification.</p>
+<p><strong>Returns:</strong>
+- A dictionary of key/value pairs. But there is only one key, <code>last_viewed_at</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountget_linked_bank_accountsinfonone"><code>robin_stocks.robinhood.account.get_linked_bank_accounts(info=None)</code></h3>
+<p>Returns all linked bank accounts.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for each bank.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountget_margin_callssymbolnone"><code>robin_stocks.robinhood.account.get_margin_calls(symbol=None)</code></h3>
+<p>Returns either all margin calls or margin calls for a specific stock.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str, optional): Will determine which stock to get margin calls for.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for each margin call.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountget_margin_interestinfonone"><code>robin_stocks.robinhood.account.get_margin_interest(info=None)</code></h3>
+<p>Returns a list of margin interest.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for each interest. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountget_notificationsinfonone"><code>robin_stocks.robinhood.account.get_notifications(info=None)</code></h3>
+<p>Returns a list of notifications.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for each notification. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountget_open_stock_positionsaccount_numbernone-infonone"><code>robin_stocks.robinhood.account.get_open_stock_positions(account_number=None, info=None)</code></h3>
+<p>Returns a list of stocks that are currently held.</p>
+<p><strong>Parameters:</strong>
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for each ticker. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>url</code>
+- <code>instrument</code>
+- <code>account</code>
+- <code>account_number</code>
+- <code>average_buy_price</code>
+- <code>pending_average_buy_price</code>
+- <code>quantity</code>
+- <code>intraday_average_buy_price</code>
+- <code>intraday_quantity</code>
+- <code>shares_held_for_buys</code>
+- <code>shares_held_for_sells</code>
+- <code>shares_held_for_stock_grants</code>
+- <code>shares_held_for_options_collateral</code>
+- <code>shares_held_for_options_events</code>
+- <code>shares_pending_from_options_events</code>
+- <code>updated_at</code>
+- <code>created_at</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountget_referralsinfonone"><code>robin_stocks.robinhood.account.get_referrals(info=None)</code></h3>
+<p>Returns a list of referrals.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for each referral. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountget_stock_loan_paymentsinfonone"><code>robin_stocks.robinhood.account.get_stock_loan_payments(info=None)</code></h3>
+<p>Returns a list of loan payments.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for each payment. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountget_subscription_feesinfonone"><code>robin_stocks.robinhood.account.get_subscription_fees(info=None)</code></h3>
+<p>Returns a list of subscription fees.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for each fee. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountget_total_divi"><code>robin_stocks.robinhood.account.get_total_divi()</code></h3>
+<p>Returns a float number representing the total amount of dividends paid to the account.</p>
+<p><strong>Returns:</strong>
+- Total dollar amount of dividends paid to the account as a 2 precision float.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountget_watchlist_by_namenamemy-first-list-infonone"><code>robin_stocks.robinhood.account.get_watchlist_by_name(name='My First List', info=None)</code></h3>
+<p>Returns a list of information related to the stocks in a single watchlist.</p>
+<p><strong>Parameters:</strong>
+- <code>name</code> (str, optional): The name of the watchlist to get data from.
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries that contain the instrument URLs and a URL that references itself.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountget_wire_transfersinfonone"><code>robin_stocks.robinhood.account.get_wire_transfers(info=None)</code></h3>
+<p>Returns a list of wire transfers.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for each wire transfer. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountload_phoenix_accountinfonone"><code>robin_stocks.robinhood.account.load_phoenix_account(info=None)</code></h3>
+<p>Returns unified information about your account.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs. If the <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<p><strong>Dictionary Keys:</strong>
+- <code>account_buying_power</code>
+- <code>cash_available_from_instant_deposits</code>
+- <code>cash_held_for_currency_orders</code>
+- <code>cash_held_for_dividends</code>
+- <code>cash_held_for_equity_orders</code>
+- <code>cash_held_for_options_collateral</code>
+- <code>cash_held_for_orders</code>
+- <code>crypto</code>
+- <code>crypto_buying_power</code>
+- <code>equities</code>
+- <code>extended_hours_portfolio_equity</code>
+- <code>instant_allocated</code>
+- <code>levered_amount</code>
+- <code>near_margin_call</code>
+- <code>options_buying_power</code>
+- <code>portfolio_equity</code>
+- <code>portfolio_previous_close</code>
+- <code>previous_close</code>
+- <code>regular_hours_portfolio_equity</code>
+- <code>total_equity</code>
+- <code>total_extended_hours_equity</code>
+- <code>total_extended_hours_market_value</code>
+- <code>total_market_value</code>
+- <code>total_regular_hours_equity</code>
+- <code>total_regular_hours_market_value</code>
+- <code>uninvested_cash</code>
+- <code>withdrawable_cash</code></p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountpost_symbols_to_watchlistinputsymbols-namemy-first-list"><code>robin_stocks.robinhood.account.post_symbols_to_watchlist(inputSymbols, name='My First List')</code></h3>
+<p>Posts multiple stock tickers to a watchlist.</p>
+<p><strong>Parameters:</strong>
+- <code>inputSymbols</code> (str or list): May be a single stock ticker or a list of stock tickers.
+- <code>name</code> (str, optional): The name of the watchlist to post data to.</p>
+<p><strong>Returns:</strong>
+- Result of the post request.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountunlink_bank_accountid"><code>robin_stocks.robinhood.account.unlink_bank_account(id)</code></h3>
+<p>Unlinks a bank account.</p>
+<p><strong>Parameters:</strong>
+- <code>id</code> (str): The bank ID.</p>
+<p><strong>Returns:</strong>
+- Information returned from post request.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodaccountwithdrawl_funds_to_bank_accountach_relationship-amount-infonone"><code>robin_stocks.robinhood.account.withdrawl_funds_to_bank_account(ach_relationship, amount, info=None)</code></h3>
+<p>Submits a post request to withdraw a certain amount of money to a bank account.</p>
+<p><strong>Parameters:</strong>
+- <code>ach_relationship</code> (str): The URL of the bank account you want to withdraw the money to.
+- <code>amount</code> (float): The amount of money you wish to withdraw.
+- <code>info</code> (str, optional): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- A list of dictionaries of key/value pairs for the transaction.</p>
+<h2 id="placing-and-cancelling-orders">Placing and Cancelling Orders</h2>
+<p>Contains all functions for placing orders for stocks, options, and crypto.</p>
+<h3 id="robin_stocksrobinhoodorderscancel_all_option_orders"><code>robin_stocks.robinhood.orders.cancel_all_option_orders()</code></h3>
+<p>Cancels all option orders.</p>
+<p><strong>Returns:</strong>
+- Returns the order information for the orders that were cancelled.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodorderscancel_all_stock_orders"><code>robin_stocks.robinhood.orders.cancel_all_stock_orders()</code></h3>
+<p>Cancels all stock orders.</p>
+<p><strong>Returns:</strong>
+- The list of orders that were cancelled.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodorderscancel_option_orderorderid"><code>robin_stocks.robinhood.orders.cancel_option_order(orderID)</code></h3>
+<p>Cancels a specific option order.</p>
+<p><strong>Parameters:</strong>
+- <code>orderID</code> (<em>str</em>): The ID associated with the order. Can be found using <code>get_all_option_orders(info=None)</code>.</p>
+<p><strong>Returns:</strong>
+- Returns the order information for the order that was cancelled.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodorderscancel_stock_orderorderid"><code>robin_stocks.robinhood.orders.cancel_stock_order(orderID)</code></h3>
+<p>Cancels a specific stock order.</p>
+<p><strong>Parameters:</strong>
+- <code>orderID</code> (<em>str</em>): The ID associated with the order. Can be found using <code>get_all_stock_orders(info=None)</code>.</p>
+<p><strong>Returns:</strong>
+- Returns the order information for the order that was cancelled.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersfind_stock_ordersarguments"><code>robin_stocks.robinhood.orders.find_stock_orders(**arguments)</code></h3>
+<p>Returns a list of orders that match the keyword parameters.</p>
+<p><strong>Parameters:</strong>
+- <code>arguments</code> (<em>str</em>): Variable length of keyword arguments. Example: <code>find_orders(symbol='FB', cancel=None, quantity=1)</code></p>
+<p><strong>Returns:</strong>
+- Returns a list of orders.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersget_all_open_option_ordersinfonone-account_numbernone"><code>robin_stocks.robinhood.orders.get_all_open_option_orders(info=None, account_number=None)</code></h3>
+<p>Returns a list of all the open option orders.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (<em>Optional</em>[<em>str</em>]): Will filter the results to get a specific value.
+- <code>account_number</code> (<em>Optional</em>[<em>str</em>]): The account number.</p>
+<p><strong>Returns:</strong>
+- Returns a list of dictionaries of key/value pairs for each open option order. If <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersget_all_open_stock_ordersinfonone-account_numbernone"><code>robin_stocks.robinhood.orders.get_all_open_stock_orders(info=None, account_number=None)</code></h3>
+<p>Returns a list of all the open stock orders.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (<em>Optional[str]</em>): Will filter the results to get a specific value.
+- <code>account_number</code> (<em>Optional[str]</em>): The account number.</p>
+<p><strong>Returns:</strong>
+- Returns a list of dictionaries of key/value pairs for each open stock order. If <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersget_all_option_ordersinfonone"><code>robin_stocks.robinhood.orders.get_all_option_orders(info=None)</code></h3>
+<p>Returns a list of all the option orders that have been processed for the account.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (<em>Optional[str]</em>): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- Returns a list of dictionaries of key/value pairs for each option order. If <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersget_all_stock_ordersinfonone"><code>robin_stocks.robinhood.orders.get_all_stock_orders(info=None)</code></h3>
+<p>Returns a list of all the stock orders that have been processed for the account.</p>
+<p><strong>Parameters:</strong>
+- <code>info</code> (<em>Optional[str]</em>): Will filter the results to get a specific value.</p>
+<p><strong>Returns:</strong>
+- Returns a list of dictionaries of key/value pairs for each stock order. If <code>info</code> parameter is provided, a list of strings is returned where the strings are the value of the key that matches <code>info</code>.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersget_option_order_infoorder_id"><code>robin_stocks.robinhood.orders.get_option_order_info(order_id)</code></h3>
+<p>Returns the information for a single option order.</p>
+<p><strong>Parameters:</strong>
+- <code>order_id</code> (<em>str</em>): The ID associated with the option order.</p>
+<p><strong>Returns:</strong>
+- Returns a list of dictionaries of key/value pairs for the order.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersget_stock_order_infoorderid"><code>robin_stocks.robinhood.orders.get_stock_order_info(orderID)</code></h3>
+<p>Returns the information for a single stock order.</p>
+<p><strong>Parameters:</strong>
+- <code>orderID</code> (<em>str</em>): The ID associated with the stock order. Can be found using <code>get_all_orders(info=None)</code>.</p>
+<p><strong>Returns:</strong>
+- Returns a list of dictionaries of key/value pairs for the order.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersordersymbol-quantity-side-limitpricenone-stoppricenone-account_numbernone-timeinforcegtc-extendedhoursfalse-jsonifytrue-market_hoursregular_hours"><code>robin_stocks.robinhood.orders.order(symbol, quantity, side, limitPrice=None, stopPrice=None, account_number=None, timeInForce='gtc', extendedHours=False, jsonify=True, market_hours='regular_hours')</code></h3>
+<p>A generic order function.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock ticker of the stock to sell.
+- <code>quantity</code> (int): The number of stocks to sell.
+- <code>side</code> (str): Either 'buy' or 'sell'.
+- <code>limitPrice</code> (float, optional): The price to trigger the market order.
+- <code>stopPrice</code> (float, optional): The price to trigger the limit or market order.
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>timeInForce</code> (str): Changes how long the order will be in effect for. 'gtc' = good until canceled. 'gfd' = good for the day.
+- <code>extendedHours</code> (str, optional): Premium users only. Allows trading during extended hours. Should be true or false.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the purchase or selling of stocks, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersorder_buy_fractional_by_pricesymbol-amountindollars-account_numbernone-timeinforcegfd-extendedhoursfalse-jsonifytrue-market_hoursregular_hours"><code>robin_stocks.robinhood.orders.order_buy_fractional_by_price(symbol, amountInDollars, account_number=None, timeInForce='gfd', extendedHours=False, jsonify=True, market_hours='regular_hours')</code></h3>
+<p>Submits a market order to be executed immediately for fractional shares by specifying the amount in dollars that you want to trade. Good for share fractions up to 6 decimal places. Robinhood does not currently support placing limit, stop, or stop loss orders for fractional trades.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock ticker of the stock to purchase.
+- <code>amountInDollars</code> (float): The amount in dollars of the fractional shares you want to buy.
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>timeInForce</code> (str, optional): Changes how long the order will be in effect for. 'gfd' = good for the day.
+- <code>extendedHours</code> (str, optional): Premium users only. Allows trading during extended hours. Should be true or false.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the purchase of stocks, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersorder_buy_fractional_by_quantitysymbol-quantity-account_numbernone-timeinforcegfd-extendedhoursfalse-jsonifytrue"><code>robin_stocks.robinhood.orders.order_buy_fractional_by_quantity(symbol, quantity, account_number=None, timeInForce='gfd', extendedHours=False, jsonify=True)</code></h3>
+<p>Submits a market order to be executed immediately for fractional shares by specifying the amount that you want to trade. Good for share fractions up to 6 decimal places. Robinhood does not currently support placing limit, stop, or stop loss orders for fractional trades.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock ticker of the stock to purchase.
+- <code>quantity</code> (float): The amount of the fractional shares you want to buy.
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>timeInForce</code> (str, optional): Changes how long the order will be in effect for. 'gfd' = good for the day.
+- <code>extendedHours</code> (str, optional): Premium users only. Allows trading during extended hours. Should be true or false.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the purchase of stocks, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersorder_buy_limitsymbol-quantity-limitprice-account_numbernone-timeinforcegtc-extendedhoursfalse-jsonifytrue"><code>robin_stocks.robinhood.orders.order_buy_limit(symbol, quantity, limitPrice, account_number=None, timeInForce='gtc', extendedHours=False, jsonify=True)</code></h3>
+<p>Submits a limit order to be executed once a certain price is reached.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock ticker of the stock to purchase.
+- <code>quantity</code> (int): The number of stocks to buy.
+- <code>limitPrice</code> (float): The price to trigger the buy order.
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>timeInForce</code> (str, optional): Changes how long the order will be in effect for. 'gtc' = good until canceled. 'gfd' = good for the day.
+- <code>extendedHours</code> (str, optional): Premium users only. Allows trading during extended hours. Should be true or false.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the purchase of stocks, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersorder_buy_marketsymbol-quantity-account_numbernone-timeinforcegtc-extendedhoursfalse-jsonifytrue"><code>robin_stocks.robinhood.orders.order_buy_market(symbol, quantity, account_number=None, timeInForce='gtc', extendedHours=False, jsonify=True)</code></h3>
+<p>Submits a market order to be executed immediately.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock ticker of the stock to purchase.
+- <code>quantity</code> (int): The number of stocks to buy.
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>timeInForce</code> (str, optional): Changes how long the order will be in effect for. 'gtc' = good until canceled. 'gfd' = good for the day.
+- <code>extendedHours</code> (str, optional): Premium users only. Allows trading during extended hours. Should be true or false.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the purchase of stocks, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersorder_buy_option_limitpositioneffect-creditordebit-price-symbol-quantity-expirationdate-strike-optiontypeboth-account_numbernone-timeinforcegtc-jsonifytrue"><code>robin_stocks.robinhood.orders.order_buy_option_limit(positionEffect, creditOrDebit, price, symbol, quantity, expirationDate, strike, optionType='both', account_number=None, timeInForce='gtc', jsonify=True)</code></h3>
+<p>Submits a limit order for an option. i.e. place a long call or a long put.</p>
+<p><strong>Parameters:</strong>
+- <code>positionEffect</code> (str): Either 'open' for a buy to open effect or 'close' for a buy to close effect.
+- <code>creditOrDebit</code> (str): Either 'debit' or 'credit'.
+- <code>price</code> (float): The limit price to trigger a buy of the option.
+- <code>symbol</code> (str): The stock ticker of the stock to trade.
+- <code>quantity</code> (int): The number of options to buy.
+- <code>expirationDate</code> (str): The expiration date of the option in 'YYYY-MM-DD' format.
+- <code>strike</code> (float): The strike price of the option.
+- <code>optionType</code> (str): This should be 'call' or 'put'.
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>timeInForce</code> (str, optional): Changes how long the order will be in effect for. 'gtc' = good until canceled. 'gfd' = good for the day. 'ioc' = immediate or cancel. 'opg' = execute at opening.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the buying of options, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersorder_buy_option_stop_limitpositioneffect-creditordebit-limitprice-stopprice-symbol-quantity-expirationdate-strike-optiontypeboth-account_numbernone-timeinforcegtc-jsonifytrue"><code>robin_stocks.robinhood.orders.order_buy_option_stop_limit(positionEffect, creditOrDebit, limitPrice, stopPrice, symbol, quantity, expirationDate, strike, optionType='both', account_number=None, timeInForce='gtc', jsonify=True)</code></h3>
+<p>Submits a stop order to be turned into a limit order once a certain stop price is reached.</p>
+<p><strong>Parameters:</strong>
+- <code>positionEffect</code> (str): Either 'open' for a buy to open effect or 'close' for a buy to close effect.
+- <code>creditOrDebit</code> (str): Either 'debit' or 'credit'.
+- <code>limitPrice</code> (float): The limit price to trigger a buy of the option.
+- <code>stopPrice</code> (float): The price to trigger the limit order.
+- <code>symbol</code> (str): The stock ticker of the stock to trade.
+- <code>quantity</code> (int): The number of options to buy.
+- <code>expirationDate</code> (str): The expiration date of the option in 'YYYY-MM-DD' format.
+- <code>strike</code> (float): The strike price of the option.
+- <code>optionType</code> (str): This should be 'call' or 'put'.
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>timeInForce</code> (str, optional): Changes how long the order will be in effect for. 'gtc' = good until canceled. 'gfd' = good for the day. 'ioc' = immediate or cancel. 'opg' = execute at opening.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the buying of options, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersorder_buy_stop_limitsymbol-quantity-limitprice-stopprice-account_numbernone-timeinforcegtc-extendedhoursfalse-jsonifytrue"><code>robin_stocks.robinhood.orders.order_buy_stop_limit(symbol, quantity, limitPrice, stopPrice, account_number=None, timeInForce='gtc', extendedHours=False, jsonify=True)</code></h3>
+<p>Submits a stop order to be turned into a limit order once a certain stop price is reached.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock ticker of the stock to purchase.
+- <code>quantity</code> (int): The number of stocks to buy.
+- <code>limitPrice</code> (float): The price to trigger the market order.
+- <code>stopPrice</code> (float): The price to trigger the limit order.
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>timeInForce</code> (str, optional): Changes how long the order will be in effect for. 'gtc' = good until canceled. 'gfd' = good for the day.
+- <code>extendedHours</code> (str, optional): Premium users only. Allows trading during extended hours. Should be true or false.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the purchase of stocks, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersorder_buy_stop_losssymbol-quantity-stopprice-account_numbernone-timeinforcegtc-extendedhoursfalse-jsonifytrue"><code>robin_stocks.robinhood.orders.order_buy_stop_loss(symbol, quantity, stopPrice, account_number=None, timeInForce='gtc', extendedHours=False, jsonify=True)</code></h3>
+<p>Submits a stop order to be turned into a market order once a certain stop price is reached.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock ticker of the stock to purchase.
+- <code>quantity</code> (int): The number of stocks to buy.
+- <code>stopPrice</code> (float): The price to trigger the market order.
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>timeInForce</code> (str, optional): Changes how long the order will be in effect for. 'gtc' = good until canceled. 'gfd' = good for the day.
+- <code>extendedHours</code> (str, optional): Premium users only. Allows trading during extended hours. Should be true or false.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the purchase of stocks, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersorder_buy_trailing_stopsymbol-quantity-trailamount-trailtypepercentage-timeinforcegtc-extendedhoursfalse-jsonifytrue"><code>robin_stocks.robinhood.orders.order_buy_trailing_stop(symbol, quantity, trailAmount, trailType='percentage', timeInForce='gtc', extendedHours=False, jsonify=True)</code></h3>
+<p>Submits a trailing stop buy order to be turned into a market order when trailing stop price is reached.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock ticker of the stock to buy.
+- <code>quantity</code> (int): The number of stocks to buy.
+- <code>trailAmount</code> (float): How much to trail by; could be percentage or dollar value depending on <code>trailType</code>.
+- <code>trailType</code> (str): Could be 'amount' or 'percentage'.
+- <code>timeInForce</code> (str, optional): Changes how long the order will be in effect for. 'gtc' = good until canceled. 'gfd' = good for the day.
+- <code>extendedHours</code> (str, optional): Premium users only. Allows trading during extended hours. Should be true or false.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the selling of stocks, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersorder_option_credit_spreadprice-symbol-quantity-spread-timeinforcegtc-account_numbernone-jsonifytrue"><code>robin_stocks.robinhood.orders.order_option_credit_spread(price, symbol, quantity, spread, timeInForce='gtc', account_number=None, jsonify=True)</code></h3>
+<p>Submits a limit order for an option credit spread.</p>
+<p><strong>Parameters:</strong>
+- <code>price</code> (float): The limit price to trigger a sell of the option.
+- <code>symbol</code> (str): The stock ticker of the stock to trade.
+- <code>quantity</code> (int): The number of options to sell.
+- <code>spread</code> (dict): A dictionary of spread options with the following keys:
+  - <code>expirationDate</code>: The expiration date of the option in 'YYYY-MM-DD' format.
+  - <code>strike</code>: The strike price of the option.
+  - <code>optionType</code>: This should be 'call' or 'put'.
+  - <code>effect</code>: This should be 'open' or 'close'.
+  - <code>action</code>: This should be 'buy' or 'sell'.
+- <code>timeInForce</code> (str, optional): Changes how long the order will be in effect for. 'gtc' = good until canceled. 'gfd' = good for the day. 'ioc' = immediate or cancel. 'opg' = execute at opening.
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the trading of options, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersorder_option_debit_spreadprice-symbol-quantity-spread-timeinforcegtc-account_numbernone-jsonifytrue"><code>robin_stocks.robinhood.orders.order_option_debit_spread(price, symbol, quantity, spread, timeInForce='gtc', account_number=None, jsonify=True)</code></h3>
+<p>Submits a limit order for an option debit spread.</p>
+<p><strong>Parameters:</strong>
+- <code>price</code> (float): The limit price to trigger a sell of the option.
+- <code>symbol</code> (str): The stock ticker of the stock to trade.
+- <code>quantity</code> (int): The number of options to sell.
+- <code>spread</code> (dict): A dictionary of spread options with the following keys:
+  - <code>expirationDate</code>: The expiration date of the option in 'YYYY-MM-DD' format.
+  - <code>strike</code>: The strike price of the option.
+  - <code>optionType</code>: This should be 'call' or 'put'.
+  - <code>effect</code>: This should be 'open' or 'close'.
+  - <code>action</code>: This should be 'buy' or 'sell'.
+- <code>timeInForce</code> (str, optional): Changes how long the order will be in effect for. 'gtc' = good until canceled. 'gfd' = good for the day. 'ioc' = immediate or cancel. 'opg' = execute at opening.
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the trading of options, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersorder_option_spreaddirection-price-symbol-quantity-spread-account_numbernone-timeinforcegtc-jsonifytrue"><code>robin_stocks.robinhood.orders.order_option_spread(direction, price, symbol, quantity, spread, account_number=None, timeInForce='gtc', jsonify=True)</code></h3>
+<p>Submits a limit order for an option spread, i.e., place a debit/credit spread.</p>
+<p><strong>Parameters:</strong>
+- <code>direction</code> (str): Can be 'credit' or 'debit'.
+- <code>price</code> (float): The limit price to trigger a trade of the option.
+- <code>symbol</code> (str): The stock ticker of the stock to trade.
+- <code>quantity</code> (int): The number of options to trade.
+- <code>spread</code> (dict): A dictionary of spread options with the following keys:
+  - <code>expirationDate</code>: The expiration date of the option in 'YYYY-MM-DD' format.
+  - <code>strike</code>: The strike price of the option.
+  - <code>optionType</code>: This should be 'call' or 'put'.
+  - <code>effect</code>: This should be 'open' or 'close'.
+  - <code>action</code>: This should be 'buy' or 'sell'.
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>timeInForce</code> (str, optional): Changes how long the order will be in effect for. 'gtc' = good until canceled. 'gfd' = good for the day. 'ioc' = immediate or cancel. 'opg' = execute at opening.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the trading of options, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersorder_sell_fractional_by_pricesymbol-amountindollars-account_numbernone-timeinforcegfd-extendedhoursfalse-jsonifytrue"><code>robin_stocks.robinhood.orders.order_sell_fractional_by_price(symbol, amountInDollars, account_number=None, timeInForce='gfd', extendedHours=False, jsonify=True)</code></h3>
+<p>Submits a market order to be executed immediately for fractional shares by specifying the amount in dollars that you want to trade. Good for share fractions up to 6 decimal places. Robinhood does not currently support placing limit, stop, or stop-loss orders for fractional trades.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock ticker of the stock to purchase.
+- <code>amountInDollars</code> (</p>
+<p>float): The amount in dollars of the fractional shares you want to buy.
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>timeInForce</code> (str, optional): Changes how long the order will be in effect for. 'gfd' = good for the day.
+- <code>extendedHours</code> (str, optional): Premium users only. Allows trading during extended hours. Should be true or false.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the purchase of stocks, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersorder_sell_fractional_by_quantitysymbol-quantity-account_numbernone-timeinforcegfd-pricetypebid_price-extendedhoursfalse-jsonifytrue-market_hoursregular_hours"><code>robin_stocks.robinhood.orders.order_sell_fractional_by_quantity(symbol, quantity, account_number=None, timeInForce='gfd', priceType='bid_price', extendedHours=False, jsonify=True, market_hours='regular_hours')</code></h3>
+<p>Submits a market order to be executed immediately for fractional shares by specifying the amount that you want to trade. Good for share fractions up to 6 decimal places. Robinhood does not currently support placing limit, stop, or stop-loss orders for fractional trades.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock ticker of the stock to purchase.
+- <code>quantity</code> (float): The amount of the fractional shares you want to buy.
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>timeInForce</code> (str, optional): Changes how long the order will be in effect for. 'gfd' = good for the day.
+- <code>priceType</code> (str, optional): Sets the type of price to use. Default is 'bid_price'.
+- <code>extendedHours</code> (str, optional): Premium users only. Allows trading during extended hours. Should be true or false.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.
+- <code>market_hours</code> (str, optional): Set to 'regular_hours' by default.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the purchase of stocks, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersorder_sell_limitsymbol-quantity-limitprice-account_numbernone-timeinforcegtc-extendedhoursfalse-jsonifytrue"><code>robin_stocks.robinhood.orders.order_sell_limit(symbol, quantity, limitPrice, account_number=None, timeInForce='gtc', extendedHours=False, jsonify=True)</code></h3>
+<p>Submits a limit order to be executed once a certain price is reached.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock ticker of the stock to sell.
+- <code>quantity</code> (int): The number of stocks to sell.
+- <code>limitPrice</code> (float): The price to trigger the sell order.
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>timeInForce</code> (str, optional): Changes how long the order will be in effect for. 'gtc' = good until canceled. 'gfd' = good for the day.
+- <code>extendedHours</code> (str, optional): Premium users only. Allows trading during extended hours. Should be true or false.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the selling of stocks, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersorder_sell_marketsymbol-quantity-account_numbernone-timeinforcegtc-extendedhoursfalse-jsonifytrue"><code>robin_stocks.robinhood.orders.order_sell_market(symbol, quantity, account_number=None, timeInForce='gtc', extendedHours=False, jsonify=True)</code></h3>
+<p>Submits a market order to be executed immediately.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock ticker of the stock to sell.
+- <code>quantity</code> (int): The number of stocks to sell.
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>timeInForce</code> (str, optional): Changes how long the order will be in effect for. 'gtc' = good until canceled. 'gfd' = good for the day.
+- <code>extendedHours</code> (str, optional): Premium users only. Allows trading during extended hours. Should be true or false.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the selling of stocks, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersorder_sell_option_limitpositioneffect-creditordebit-price-symbol-quantity-expirationdate-strike-optiontypeboth-account_numbernone-timeinforcegtc-jsonifytrue"><code>robin_stocks.robinhood.orders.order_sell_option_limit(positionEffect, creditOrDebit, price, symbol, quantity, expirationDate, strike, optionType='both', account_number=None, timeInForce='gtc', jsonify=True)</code></h3>
+<p>Submits a limit order for an option, such as placing a short call or a short put.</p>
+<p><strong>Parameters:</strong>
+- <code>positionEffect</code> (str): Either 'open' for a sell to open effect or 'close' for a sell to close effect.
+- <code>creditOrDebit</code> (str): Either 'debit' or 'credit'.
+- <code>price</code> (float): The limit price to trigger a sell of the option.
+- <code>symbol</code> (str): The stock ticker of the stock to trade.
+- <code>quantity</code> (int): The number of options to sell.
+- <code>expirationDate</code> (str): The expiration date of the option in 'YYYY-MM-DD' format.
+- <code>strike</code> (float): The strike price of the option.
+- <code>optionType</code> (str): This should be 'call' or 'put'.
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>timeInForce</code> (str, optional): Changes how long the order will be in effect for. 'gtc' = good until canceled. 'gfd' = good for the day. 'ioc' = immediate or cancel. 'opg' = execute at opening.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the selling of options, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersorder_sell_option_stop_limitpositioneffect-creditordebit-limitprice-stopprice-symbol-quantity-expirationdate-strike-optiontypeboth-account_numbernone-timeinforcegtc-jsonifytrue"><code>robin_stocks.robinhood.orders.order_sell_option_stop_limit(positionEffect, creditOrDebit, limitPrice, stopPrice, symbol, quantity, expirationDate, strike, optionType='both', account_number=None, timeInForce='gtc', jsonify=True)</code></h3>
+<p>Submits a stop order to be turned into a limit order once a certain stop price is reached.</p>
+<p><strong>Parameters:</strong>
+- <code>positionEffect</code> (str): Either 'open' for a sell to open effect or 'close' for a sell to close effect.
+- <code>creditOrDebit</code> (str): Either 'debit' or 'credit'.
+- <code>limitPrice</code> (float): The limit price to trigger a sell of the option.
+- <code>stopPrice</code> (float): The price to trigger the limit order.
+- <code>symbol</code> (str): The stock ticker of the stock to trade.
+- <code>quantity</code> (int): The number of options to sell.
+- <code>expirationDate</code> (str): The expiration date of the option in 'YYYY-MM-DD' format.
+- <code>strike</code> (float): The strike price of the option.
+- <code>optionType</code> (str): This should be 'call' or 'put'.
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>timeInForce</code> (str, optional): Changes how long the order will be in effect for. 'gtc' = good until canceled. 'gfd' = good for the day. 'ioc' = immediate or cancel. 'opg' = execute at opening.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the selling of options, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersorder_sell_stop_limitsymbol-quantity-limitprice-stopprice-account_numbernone-timeinforcegtc-extendedhoursfalse-jsonifytrue"><code>robin_stocks.robinhood.orders.order_sell_stop_limit(symbol, quantity, limitPrice, stopPrice, account_number=None, timeInForce='gtc', extendedHours=False, jsonify=True)</code></h3>
+<p>Submits a stop order to be turned into a limit order once a certain stop price is reached.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock ticker of the stock to sell.
+- <code>quantity</code> (int): The number of stocks to sell.
+- <code>limitPrice</code> (float): The price to trigger the sell order.
+- <code>stopPrice</code> (float): The price to trigger the limit order.
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>timeInForce</code> (str, optional): Changes how long the order will be in effect for. 'gtc' = good until canceled. 'gfd' = good for the day.
+- <code>extendedHours</code> (str, optional): Premium users only. Allows trading during extended hours. Should be true or false.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the selling of stocks, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersorder_sell_stop_losssymbol-quantity-stopprice-account_numbernone-timeinforcegtc-extendedhoursfalse-jsonifytrue"><code>robin_stocks.robinhood.orders.order_sell_stop_loss(symbol, quantity, stopPrice, account_number=None, timeInForce='gtc', extendedHours=False, jsonify=True)</code></h3>
+<p>Submits a stop order to be turned into a market order once a certain stop price is reached.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock ticker of the stock to sell.
+- <code>quantity</code> (int): The number of stocks to sell.
+- <code>stopPrice</code> (float): The price to trigger the market order.
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>timeInForce</code> (str, optional): Changes how long the order will be in effect for. 'gtc' = good until canceled. 'gfd' = good for the day.
+- <code>extendedHours</code> (str, optional): Premium users only. Allows trading during extended hours. Should be true or false.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the selling of stocks, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersorder_sell_trailing_stopsymbol-quantity-trailamount-trailtypepercentage-timeinforcegtc-extendedhoursfalse-jsonifytrue"><code>robin_stocks.robinhood.orders.order_sell_trailing_stop(symbol, quantity, trailAmount, trailType='percentage', timeInForce='gtc', extendedHours=False, jsonify=True)</code></h3>
+<p>Submits a trailing stop sell order to be turned into a market order when the trailing stop price is reached.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock ticker of the stock to sell.
+- <code>quantity</code> (int): The number of stocks to sell.
+- <code>trailAmount</code> (float): How much to trail by; could be a percentage or dollar value depending on <code>trailType</code>.
+- <code>trailType</code> (str): Could be 'amount' or 'percentage'.
+- <code>timeInForce</code> (str, optional): Changes how long the order will be in effect for. 'gtc' = good until canceled. 'gfd' = good for the day.
+- <code>extendedHours</code> (str, optional): Premium users only. Allows trading during extended hours. Should be true or false.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the selling of stocks, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<hr />
+<h3 id="robin_stocksrobinhoodordersorder_trailing_stopsymbol-quantity-side-trailamount-trailtypepercentage-account_numbernone-timeinforcegtc-extendedhoursfalse-jsonifytrue"><code>robin_stocks.robinhood.orders.order_trailing_stop(symbol, quantity, side, trailAmount, trailType='percentage', account_number=None, timeInForce='gtc', extendedHours=False, jsonify=True)</code></h3>
+<p>Submits a trailing stop order to be turned into a market order when the trailing stop price is reached.</p>
+<p><strong>Parameters:</strong>
+- <code>symbol</code> (str): The stock ticker of the stock to trade.
+- <code>quantity</code> (int): The number of stocks to trade.
+- <code>side</code> (str): 'buy' or 'sell'.
+- <code>trailAmount</code> (float): How much to trail by; could be a percentage or dollar value depending on <code>trailType</code>.
+- <code>trailType</code> (str): Could be 'amount' or 'percentage'.
+- <code>account_number</code> (str, optional): The Robinhood account number.
+- <code>timeInForce</code> (str, optional): Changes how long the order will be in effect for. 'gtc' = good until canceled. 'gfd' = good for the day.
+- <code>extendedHours</code> (str, optional): Premium users only. Allows trading during extended hours. Should be true or false.
+- <code>jsonify</code> (str, optional): If set to False, function will return the request object which contains status code and headers.</p>
+<p><strong>Returns:</strong>
+- A dictionary that contains information regarding the purchase or sale of stocks, such as the order id, the state of order (queued, confirmed, filled, failed, canceled, etc.), the price, and the quantity.</p>
+<h1 id="_1"></h1>
+<h6 id="backlinks">Backlinks:</h6>
+<ul>
+<li><a href="../Algotrading/">Algotrading</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
