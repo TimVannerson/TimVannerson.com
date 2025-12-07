@@ -1,4 +1,9 @@
 ---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: Post
+permalink: /
 title: Home
 ---
 # Roots & Branches
@@ -9,5 +14,5 @@ I'm Tim and I used this space to cultivate a digital garden.
 
 I hope you enjoy your stroll.
 
-- [[notes/Dedication]]
-- *[Jump to 'First Principles'](/notes/First Principles)*
+- [[Dedication]]
+- [[First Principles]]
