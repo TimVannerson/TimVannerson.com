@@ -6,7 +6,7 @@ layout: Post
 permalink: /
 title: Home
 ---
-# Roots & Branches
+# TimVannerson.com
 
 Hello there.
 
@@ -14,5 +14,5 @@ I'm Tim and I used this space to cultivate a digital garden.
 
 I hope you enjoy your stroll.
 
-- [[Dedication]]
-- *[[First Principles|Jump to First Principles...]]*
+[[Dedication]]
+[[First Principles|Jump to First Principles...]]
