@@ -24,9 +24,9 @@
 # Preferences (controls template behavior)
 preferences:
   homepage:
-    enabled: false
-  search:
     enabled: true
+  search:
+    enabled: false
   backlinks:
     enabled: true
   pagepreview:
@@ -47,9 +47,9 @@ css_file: "/assets/css/style.css"
 ie_css: "/assets/css/ie-target.css"
 
 # Menu Items
-#menu:
-#  - title: "Notes"
-#    url: "/notes"
+menu:
+  - title: "Notes"
+    url: "/notes"
 #  - title: "Blog"
 #    url: "/blog"
 #  - title: "About"
