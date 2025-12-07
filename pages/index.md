@@ -15,4 +15,4 @@ I'm Tim and I used this space to cultivate a digital garden.
 I hope you enjoy your stroll.
 
 - [[Dedication]]
-- [[First Principles]]
+- *[[First Principles|Jump to First Principles...]]*

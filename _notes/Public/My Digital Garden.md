@@ -1,5 +1,3 @@
 ---
 ---
-# Hello there...
-
-[Testing](Dedication.md)
+[[Dedication|Testing]]
