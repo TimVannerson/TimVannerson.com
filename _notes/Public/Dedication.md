@@ -1,7 +1,5 @@
 ---
 ---
-# Dedication
-
 *For Mason*
 *For Paxtyn*
 *For Chloe*
