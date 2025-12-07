@@ -6,4 +6,4 @@
 
 ### Keep Growing
 
-##### [[My Digital Garden|Enter the garden...]]
+##### [[My Digital Garden]]
